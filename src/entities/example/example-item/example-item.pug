@@ -1,0 +1,10 @@
+mixin ExampleItem(props)
+    -
+        const {buttons, img, title, description} = props || {}
+    article.main-example-item.j-example-item
+        .main-example-item__header
+            img.main-example-item__paint.j-example-picture(src=img.src alt=img.alt)
+        .main-example-item__body
+            h5.main-example-item__title=title
+            p.main-example-item__description=description
+        a.main-example-item__link(href='#')

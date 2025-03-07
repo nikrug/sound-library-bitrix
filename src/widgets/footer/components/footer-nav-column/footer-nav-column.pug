@@ -1,0 +1,8 @@
+mixin FooterNavColumn (data)
+    -
+        const {title, items} = data || {}
+    .footer-nav-column(class=attributes.class)
+        h5.footer-nav-column__title=title
+        .footer-nav-column__body
+            each item in items
+                a.footer-nav-column__link(href=item.link)=item.label

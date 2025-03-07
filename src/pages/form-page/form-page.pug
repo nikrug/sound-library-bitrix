@@ -1,0 +1,43 @@
+extends  @shared/layout/some-layout/some-layout
+
+block variables
+    -
+        const title = 'Form Page'
+        const formId = 'test'
+        const breadcrumbs = ['breadcrumbs', 'form']
+block content
+    div(style='display: grid; grid-template-columns: 1fr 1fr')
+        +Section
+            .j-form-page
+                h2.form-page__title Валидация
+                form.j-ajaxForm#test(action='http://localhost:3000/errors',  method='GET', novalidate )
+                    fieldset
+                        input#sessid(type='hidden', name='sessid', value='')
+                        +FieldText#name(formId=formId placeholder='Ваше имя' name='user_name' required)
+                        +FieldText(formId=formId placeholder='Ваш E-mail' name='user_email' required type='email')
+                        +FieldText(formId=formId placeholder='URL' name='user_url' type='url')
+                        +FieldText(formId=formId placeholder='Максимальноя длина' name='max_length' maxLength=6)
+                        +FieldText#user_password(formId=formId placeholder='Ваш пароль' name='user_password' type='password' required minLength=6)
+                        +FieldText(formId=formId placeholder='Повторите пароль пароль' name='user_repeat_password' type='password' required minLength=6 equalTo='user_password')
+                        +FieldText(formId=formId placeholder='Текст сообщения' name='message' required isArea)
+                        +FieldText(formId=formId placeholder='Телефон' name='phone' required mask='+7 (000) 000 00 00')
+                        +Checkbox(formId=formId name='confirm' required) Согласен с&nbsp;
+                            a(href="http://test" target="_blank") ссылка
+                        +FieldSelect({
+                            options: [
+                                {
+                                    label: "Опция 1"
+                                },
+                                {
+                                    label: "Опция 2"
+                                },
+                            ]
+                        })(formId=formId, name='select', required, placeholder='Селект')
+                        input(type='hidden', name='PARAMS_HASH', value='a56a2958395fdbd9a186982e0c7803ef')
+                        +Button(label='Submit' type='submit')
+        +Section
+            .form-page__autocomplites
+                h2.form-page__title Автозаполнение
+                form#auto.j-ajaxForm-html.j-autocomplete(action='test',  method='get', novalidate data-html="form-result")
+                    +FieldText.j-autocomplete-input(formId='auto' name='auto-test' placeholder='Введите название...')
+                    #form-result

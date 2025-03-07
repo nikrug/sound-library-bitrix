@@ -1,0 +1,508 @@
+
+.header{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-position: center;
+    background-size: cover;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+   }
+   
+   input[type="checkbox"]:focus {
+    outline: none;
+   }
+   
+   input[type="checkbox"]::before {
+    display: inline-block;
+    width: 1.125rem;
+    height: 1.125rem; 
+
+    background-color: $title-light;
+
+    border-radius: .1875rem; 
+
+    content: "";
+   }
+   
+   input[type="checkbox"]:checked::before {
+    background-color: $title-light; 
+    background-image: url("/public/images/music-img/Vector.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%; 
+   }
+
+.header__menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    border-bottom: 1px solid $deep-blue-saturat;
+}
+
+.header__search{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 50px 13px;
+
+    text-align: center;
+
+    background-image: url("/public/images/header/header-bg_1.png");
+}
+
+ // search text
+.header__title-text{
+    @include font-style(600,  1.25rem, 1.875rem,$pure-white)
+}
+
+.header__title-text-gray{
+    @include font-style(600, 1rem, 1.375rem, $description-light);
+    
+    margin: 0 0 2rem;
+}
+
+.header__search-text{
+    @include font-style(400, .875rem, 1.5rem, $pure-white);
+
+    margin: 1rem 0 2rem;
+}
+
+.header__bottom-text{
+    @include font-style(500, .875rem, 1.5rem, $pure-white);
+
+    margin: 0 0 3rem;
+
+}
+
+ // search input
+
+.header__search-line input{
+width: 100%;
+height: 44px;
+}
+
+.header__search-line {
+align-items: center;
+width: 100%;
+
+text-align: left;
+}
+
+.search{
+    width: 100%;
+}
+
+.search__input {
+    position: relative;
+}
+
+.search__input img {
+        position: absolute;
+        top: 50%; /* Вертикальная позиция на середине контейнера */
+        left: 20px; /* Позиция изображения */
+        
+        transform: translateY(-50%); /* Центрирование по вертикали */
+}
+
+.search__input input {
+    @include font-style(500, 1rem, 1.75rem, $description-dark);
+
+    box-sizing: border-box; /* Чтобы отступ не увеличивал ширину */
+
+    padding-left: 50px; /* Отступ для ввода текста, чтобы избежать наложения */
+
+    border-radius: 8px;
+   
+}
+
+ // menu-login text
+
+.header__menu-text-header{
+    position: absolute;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-left: 0.65rem;
+
+    visibility: hidden;
+}
+
+.menu__text{
+    @include font-style(500, 1rem, 1.5rem, $description-light);
+
+    margin: 0 1.875rem 2.5rem 0;
+
+    cursor: pointer;
+}
+
+.modal__login-title-text{
+    @include font-style(600, 1.75rem, 2.8125rem, $dark-blue);
+}
+
+.modal__email-password-text{
+    @include font-style(500, 1rem, 1.75rem, $description-dark);
+}
+
+.modal__sign-up-text{
+    @include font-style(600, 1rem, 1.5rem, $deep-blue);
+}
+
+.modal__transparent-text{
+    @include font-style(500, 1rem, 1.75rem, $description-light);
+}
+
+.modal__login-icons{
+margin-right: 20px;
+}
+
+
+.modal__remember-margin{
+    margin:-1.25rem 0 4.375rem;
+}
+
+.menu__text:hover {
+    color:$pure-white; /* Цвет при наведении */
+}
+
+ // модальное окно
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+
+
+    width:100%;
+    height: 100%;
+    overflow: auto;
+
+    background-color: $blue-saturat; 
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal__show-modal{
+visibility: visible;
+opacity: 1;
+
+}
+
+.modal__content{
+    display: flex;
+    flex-direction: column; /* Устанавливаем вертикальное направление */
+    gap: 1.3rem; /* Задаем расстояние между элементами */
+    align-items: center;
+
+    text-align: center;
+    
+    background-color: $pure-white;
+}
+
+.modal__img-container{
+display: flex;
+flex-direction: row;
+height: 1.5rem;
+}
+
+.modal__login-form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    text-align: left;
+}
+
+.modal__close{
+    height: 1.125rem;
+    margin:1.875rem 1.875rem  0  auto;
+
+    cursor: pointer;
+}
+
+.modal__email-password-container {
+    width: 100%;
+    height: 2.75rem;
+    margin: 12px 0;
+    padding: 1rem;
+
+    background-color: $title-light;
+
+    border: 0;
+    border-radius: 8px;
+
+    @include font-style(500, 1rem, 1.5rem, $description-dark);
+  }
+  
+  .modal__login-button-modal{
+    width: 100%;
+    height: 3.125rem;
+    margin: 3.6rem 0 .5rem;
+
+    @include font-style(500, .875rem, 1.5rem, $pure-white);
+
+    background-color:$deep-blue ;
+
+    border: none ;
+    border-radius: 8px;
+}
+
+ // dropdown
+.dropdown-button {
+    width: 40px;
+    height: 40px;
+    
+    background-color: transparent; /* Прозрачный фон */
+    background-image: url("/public/images/header/dropdown_menu.svg");
+    background-repeat: no-repeat; /* Запрет на повторение изображения */
+
+    border: none; /* Убираем стандартные рамки */
+
+    outline: none; /* Убираем обводку при фокусе */
+    cursor: pointer;
+
+  }
+ 
+  .dropdown-button-close{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+
+    background-image: url("/public/images/header/close-menu.svg"); /* Фоновое изображение */
+    background-size: 100% 100%; /* Изображение заполняет весь размер кнопки, искажая пропорции */
+  }
+
+  .dropdown-button-hidden{
+    display: none;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    max-height: 0; /* Начальная высота 0 */
+    margin-top: 15px;
+    padding: 30px 0 1px 20px;
+
+    overflow: hidden; /* Скрывает содержимое, выходящее за пределы */
+
+    background-color: $dark-blue-menu;
+
+    border-top: 1px solid $description-light;
+
+    opacity: 0;
+
+    transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease; /* Плавный переход на max-height и opacity */
+}
+
+.show-dropdown {
+    height: 60rem;
+    max-height: 60rem; /* Установите максимальную высоту, достаточную для вашего содержимого */
+
+    visibility: visible; /* Начальное состояние видимости */
+
+    opacity: 1; /* Полная видимость */
+}
+
+.menu__login-button{
+    width: 6.25rem;
+    height: 3.125rem;
+
+    background-color:$deep-blue ;
+
+    @include font-style(500, .875rem, 1.5rem, $pure-white);
+
+    border: none ;
+    border-radius: 8px;
+}
+
+.show-menu{
+    display: flex;
+
+    visibility: visible;
+}
+
+.close-button{
+    display: none;
+    margin-top: 10px;
+
+    visibility: hidden;
+
+    cursor: pointer;
+  }
+
+  .show-close{
+    display: block;
+
+    visibility: visible;
+  }
+
+
+  @media(min-width:#{$br-tablet}px) {
+    .header__title-text{
+        @include font-style(700, 2.25rem, 3.25rem, $pure-white);
+    }
+    
+    .header__title-text-gray{
+        @include font-style(500, 1.125rem, 1.875rem, $description-light);
+    }
+    
+
+    .dropdown-content {
+        height: 30rem;
+    }
+
+      .modal{
+        align-items: center;
+
+        background-color: $dark-blue-menu; 
+    }
+    
+    .show-modal{
+    visibility: visible;
+
+    opacity: 1;
+    
+    }
+
+    .modal__content{
+        z-index: 1000;
+
+        gap: 20px; /* Задаем расстояние между элементами */
+        width: 30rem; 
+        margin: 100px auto ;
+        padding-bottom: 16px;
+
+        border-radius: 9px;
+
+    }
+    
+    .modal__login-form{
+        width: 90%;
+    }
+
+    .header__search{
+        padding: 98px 45px 70px;
+    }
+
+    .header__search-line input{
+        width: 100%;
+        height: 60px;
+    }
+
+    .header__search-line {
+        align-items: center;
+
+        width: 600px;
+
+        text-align: left;
+    }
+  } 
+
+  @media(min-width:#{$br-tablet}px){
+    .modal__email-password-container{
+        margin: 18px 0;
+    }
+
+    .modal__login-form{
+        width: 85%;
+    }
+
+    .modal__content{
+        z-index: 1000;
+
+        gap: 20px; /* Задаем расстояние между элементами */
+        width: 30rem; 
+        margin:0 ;
+        padding-bottom: 16px;
+        
+        
+        border-radius: 9px;
+
+    }
+  }
+
+  @media(min-width:#{$br-desktop}px){
+    .modal{
+        align-items: center;
+
+        background-color: $blue-saturat; 
+    }
+
+   .menu{
+    visibility: visible;
+
+   }
+
+    .header__menu-text-header{
+        position: relative;
+        z-index: 10;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;  
+        justify-content: center; 
+        margin-top: auto;
+        margin-left: auto;
+
+        text-align: center;
+    }
+
+    .dropdown-button {
+        visibility: hidden;
+        
+    }
+
+    .menu__text{
+        @include font-style(500, .875rem, 1.5rem, $description-light);
+
+        margin: 0 10px;
+
+        cursor: pointer;
+    }
+
+    .header__menu{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0 10px 50px;
+    }
+
+    .show-dropdown {
+        visibility: hidden;
+        opacity: 1;
+      
+      }
+
+      .close-button{
+        display: none;
+        margin-top: 10px;
+
+        visibility: hidden;
+
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        visibility: hidden;
+    }
+
+    
+  }
+
+

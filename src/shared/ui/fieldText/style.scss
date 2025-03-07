@@ -1,0 +1,49 @@
+.field-text {
+
+  position: relative;
+
+  width: 100%;
+
+  &__placeholder {
+    --pa-poz: 50%;
+    position: absolute;
+    top: var(--pa-poz);
+    left: 0;
+
+    display: block;
+    padding-left: 8px;
+
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px;
+
+    font-size: 18px;
+
+    border: 2px solid $color-green;
+    border-radius: 8px;
+  }
+
+  &__input:not(:placeholder-shown) ~ &__placeholder, &__input:focus ~ &__placeholder  {
+    --pa-poz: -10px;
+
+  }
+
+
+  &._error &__target {
+    border-color: $color-red;
+  }
+
+  &__error-message {
+    display: block;
+
+    color: $color-red;
+  }
+
+  ._error &__error-message{
+    padding-top: 4px;
+  }
+
+}

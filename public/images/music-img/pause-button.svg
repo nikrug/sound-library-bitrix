@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg width="53" height="53" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer play-pause-button">
+  <title>Layer 1</title>
+  <circle cx="17" cy="17.5" fill="#CDD6F9" id="svg_1" r="17"/>
+  <line fill="none" id="svg_13" stroke="#0432DF" stroke-width="3" transform="matrix(1 0 0 1 0 0)" x1="13" x2="13" y1="9.23" y2="27.05"/>
+  <line fill="none" id="svg_15" stroke="#0432DF" stroke-width="3" transform="matrix(1 0 0 1 0 0)" x1="21.45" x2="21.45" y1="9.45" y2="27.28"/>
+ </g>
+</svg>

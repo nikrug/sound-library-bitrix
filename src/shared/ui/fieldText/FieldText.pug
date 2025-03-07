@@ -1,0 +1,34 @@
+mixin FieldText
+    -
+        const Tag = attributes.isArea ? 'textarea' : 'input';
+        const commonAttrs = {
+            name: attributes.name,
+            id: attributes.id,
+            required: attributes.required,
+            minLength: (attributes.mask && attributes.mask.length) || attributes.minLength,
+            class: attributes.class,
+            maxLength: attributes.maxLength
+        }
+
+        const inputAttrs = {
+            type: attributes.type || 'text',
+            value: attributes.value,
+            'data-mask': attributes.mask,
+        }
+        const textareaAttrs = {
+            rows: 5,
+            cols: 40
+        }
+
+        const tagAttributes = Object.assign({}, commonAttrs, attributes.isArea ? textareaAttrs : inputAttrs)
+
+    .field-text(class=`j-err_${attributes.formId}_${attributes.name}`)
+        #{Tag}.field-text__input&attributes(tagAttributes)
+        if (attributes.placeholder)
+            label.field-text__placeholder
+                !=attributes.placeholder
+                if attributes.required
+                    | *
+        span.field-text__error-message(class=`j-err_${attributes.formId}_${attributes.name}_TEXT`)
+
+

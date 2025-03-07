@@ -1,0 +1,5 @@
+import '@shared/ui'
+import '@entities'
+import '@widgets'
+import '@pages'
+import './scripts'

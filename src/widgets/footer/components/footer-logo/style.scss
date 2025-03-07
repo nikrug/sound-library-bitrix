@@ -1,0 +1,44 @@
+.footer-logo {
+
+  grid-template-columns: auto auto;
+  gap: 8px;
+  align-items: center;
+
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__label {
+    width: 300px;
+    margin: 1rem 0;
+
+    font-weight: 500;
+
+    @include font-style(400, .875rem, 1.5rem , $description-light);
+
+  }
+}
+
+@media(min-width:#{$br-tablet}px) {
+  .footer-logo {
+    grid-template-columns: auto auto;
+    gap: 8px;
+    align-items: center;
+  
+  
+    &__icon {
+      width: 30px;
+      height: 30px;
+    }
+  
+    &__label {
+      width: 300px;
+      margin: 0.1rem 0 1.7rem;
+
+      font-weight: 500;
+    }
+  }
+}  
+

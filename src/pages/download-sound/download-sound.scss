@@ -1,0 +1,181 @@
+
+ // Blocks
+.download{
+padding: 3.125rem 1rem 0;
+
+text-align: center;
+
+background-color: $deep-blue;
+
+}
+
+.download__card-box{
+    text-align: left;
+
+}
+
+.download__basic-card{
+margin: 1rem 0;
+padding: 2rem 2rem 3rem;
+
+background-color: $deep-blue;
+
+border: 1px solid $deep-blue-saturat;
+border-radius: .75rem;
+}
+
+.download__premium-card{
+margin-top: 1rem;
+margin-bottom: 1rem;
+padding: 1.2rem 2rem 2rem 1.9rem;
+
+background-color: $ligth-blue;
+
+border-radius:.75rem;
+
+}
+ 
+ // elements
+.download__basic-button{
+ @include button-style(none,none,$deep-blue,.125rem solid $pure-white,.5rem);
+
+ max-width: 7.5625rem;
+
+ @include font-style(600, .875rem,1.5rem,$pure-white);
+
+ padding: .625rem 1.15rem .625rem 1.1rem;
+
+ text-align: center
+}
+
+.download__premium-button{
+@include button-style(none,none,$pure-white,.125rem solid $pure-white,.5rem);
+@include font-style(600, .875rem,1.5rem,$deep-blue);
+
+max-width: 7.5625rem;
+padding: .625rem 1.15rem;
+
+text-align: center
+}
+
+ // text
+.download__title-text{
+    @include font-style(600, 1.5rem,2.375rem,$pure-white);
+}
+
+.download__description-text{
+    @include font-style(400, 1rem,1.75rem,$pure-white);
+
+    margin: 1rem 0 1.7rem;
+}
+
+.download__card-title-text{
+    @include font-style(600, 1.25rem,1.875rem,$pure-white);
+}
+
+.download__card-subtitle-text{
+    @include font-style(600, 1.125rem, 1.875rem, $pure-white);
+
+    margin: 0;
+}
+
+.download__bottom-text{
+    @include font-style(400, .9rem,1.75rem,$pure-white);
+
+    padding: 0 0 3rem;
+}
+
+.download__free-margin{
+    margin: .5rem 0 0.4rem;
+}
+
+@media(min-width:#{$br-tablet}px) {
+    .download__title-text{
+        @include font-style(600, 1.5rem,2.375rem,$pure-white);
+
+        margin: 0 0 1rem;
+    }
+
+    .download__bottom-text{
+        @include font-style(400, 1rem,1.75rem,$pure-white);
+
+        padding: 0 0 4rem;
+    }
+
+    .download__premium-card{
+        margin-left: 0;
+        padding: 2rem 2rem 2rem 1.9rem;
+    }
+
+    .download{
+        padding: 3.725rem 5rem 0;
+    }
+
+    .download__card-box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 43.75rem; // Установите желаемую максимальную ширину
+        margin: 2rem 0 1rem; 
+
+        text-align: left;
+    }
+
+    .download__basic-card{
+        padding: 2rem 2rem 0;
+    }
+
+    .download__description-text {
+        margin: 0 0 1.3rem;
+        
+    }
+    
+    .download__card-title-text{
+        @include font-style(600, 1.5rem,2.375rem,$pure-white);
+    }
+
+    .download__card-subtitle-text{
+        @include font-style(600, 1.25rem, 2.125rem, $pure-white);
+
+        margin: 1rem 0;
+    }
+
+    .download__free-margin{
+        margin: 2.6rem 0 1.05rem;
+    }
+  }  
+
+@media(min-width:#{$br-desktop}px){
+    .download__title-text{
+        @include font-style(700, 2.25rem,3.25rem,$pure-white);
+    }
+
+    .download__basic-card{
+        padding: 2rem;
+    }
+
+   .download__premium-card{
+    padding: 2rem;
+   }
+
+    .download__description-text{
+        @include font-style(500, 1.125rem,2.125rem,$pure-white);
+
+        margin: 1rem 0;
+    }
+    
+    .download__card-title-text{
+        @include font-style(600, 1.75rem,2.8125rem,$pure-white);
+    }
+    
+    .download__card-subtitle-text{
+        @include font-style(600, 1.25rem, 2.125rem, $pure-white);
+
+        margin: 1rem 0 ;
+    }
+
+        .download__free-margin{
+        margin: 3rem 0 1.1rem;
+    }
+  }
+

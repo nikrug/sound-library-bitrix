@@ -1,0 +1,16 @@
+@use "sass:math";
+
+@function rem($size) {
+  @return math.div($size, 16) + rem;
+}
+
+@function fluid-size($min-size, $max-size, $start-br: $br-mobile, $end-br: $br-tablet) {
+  $size-diff: $max-size - $min-size;
+  $br-diff: $end-br - $start-br;
+
+  @return calc(#{$min-size}px + #{$size-diff} * ((100vw - #{$start-br}px) / #{$br-diff}));
+}
+
+@function dvh($size) {
+  @return calc(var(--vh, 1vh) * $size)
+}

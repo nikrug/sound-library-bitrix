@@ -1,0 +1,10 @@
+extends ../default/default
+
+block default
+    +Controller
+    main.main
+        if(breadcrumbs)
+            .main__breadcrumbs.container
+                +Breadcrumbs(breadcrumbs)
+        block content
+    +Footer

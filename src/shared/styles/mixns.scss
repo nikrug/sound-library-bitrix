@@ -1,0 +1,81 @@
+@mixin br-mobile {
+  @media (min-width: $br-mobile + px) {
+    @content
+  }
+}
+
+
+@mixin br-tablet {
+  @media (min-width: $br-tablet + px) {
+    @content
+  }
+}
+
+
+@mixin br-desktop {
+  @media (min-width: $br-desktop + px) {
+    @content
+  }
+}
+
+
+@mixin br-desktop-middle {
+  @media (min-width: $br-middle + px) {
+    @content
+  }
+}
+
+
+@mixin br-desktop-max {
+  @media (min-width: $br-max + px) {
+    @content
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin mobile-active {
+  @media (hover: none) or (pointer: coarse) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin text-overflow($count: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+}
+
+
+@mixin infinite-grid($min: 1px) {
+  grid-template-columns: repeat(auto-fill, minmax($min, 1fr));
+}
+
+
+@mixin font-style($font-weight,$font-syze,$line-height,$color){
+  color:$color;
+  font-weight: $font-weight;
+  font-size: $font-syze;
+  line-height: $line-height;
+
+}
+
+@mixin button-style($width,$height,$bk-color,$border,$border-radius){
+  width: $width;
+  height: $height;
+
+  background-color: $bk-color;
+  border:$border;
+  border-radius: $border-radius;
+  cursor: pointer;
+}

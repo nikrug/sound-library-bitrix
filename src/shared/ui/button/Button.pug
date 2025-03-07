@@ -1,0 +1,14 @@
+mixin Button(props)
+    -
+        const Tag = attributes.href ? 'a' : 'button';
+        const tagAttributes = {
+            class: attributes.class,
+            href: attributes.href,
+            type: attributes.type
+        };
+
+    #{Tag}.simple-btn&attributes(tagAttributes)
+        if attributes.label
+            != attributes.label
+        else
+            block

@@ -1,0 +1,68 @@
+mixin music-player
+    div.music-player
+        div.music-player__title-text Best sound effects for youtube videos
+
+        div.music-player__tab-text.tab
+            input#tab-btn-1(type="radio" name="tab-btn" value="" checked)
+            label(for="tab-btn-1") All
+            input#tab-btn-2(type="radio" name="tab-btn" value="")
+            label(for="tab-btn-2") Jumpscare
+            input#tab-btn-3(type="radio" name="tab-btn" value="")
+            label(for="tab-btn-3") Mellow
+            input#tab-btn-4(type="radio" name="tab-btn" value="")
+            label.show(for="tab-btn-4") Happiness
+            input#tab-btn-5(type="radio" name="tab-btn" value="")
+            label.show(for="tab-btn-5") Ambience
+            input#tab-btn-6(type="radio" name="tab-btn" value="")
+            label.show(for="tab-btn-6") Zonk
+            
+            
+            img.filter__button.filter__open(src="/public/images/music-img/filter_mobile.svg")
+            
+            img.filter__button-tablet.filter__open(src="/public/images/music-img/filter_tablet.svg")
+            
+            img.filter__button-desktop.filter__open(src="/public/images/music-img/filter_desctop.svg")
+            .tab-content#content-1
+                +music-player-song
+                +music-player-song
+                +music-player-song
+                +music-player-song
+                +music-player-song
+                +music-player-song
+            .tab-content#content-2
+                +music-player-song
+                +music-player-song
+                +music-player-song
+                +music-player-song
+                +music-player-song
+                +music-player-song
+                +music-player-song
+            .tab-content#content-3
+                +music-player-song
+            .tab-content#content-4
+                +music-player-song
+            .tab-content#content-5
+                +music-player-song
+            .tab-content#content-6
+                +music-player-song
+        div.music-player__filter.filter
+            span.filter__close.close 
+                img(src="/public/images/music-img/close_button.svg")
+            p.fiter__title-text Filter
+
+            p.fiter__text Duration
+            div.slider-styled#invert-connects
+            button.filter__all-category-button.fiter__category-text All Category
+            label
+                input(type="checkbox" name="subscribe")
+                p.filter__text Only free sounds
+            label
+                input(type="checkbox" name="favorite")
+                p.filter__text Only my favorite sounds
+            button.filter__apply-button Apply
+
+
+                            +music-player-song
+    a.music-link-text(href="#") See all sound effects
+
+

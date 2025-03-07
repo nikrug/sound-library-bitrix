@@ -1,0 +1,12 @@
+include components/index
+mixin Footer
+    -
+        const {footerBodyList} = require('./config')
+    footer.footer
+        .footer__container.container
+            .footer__top
+                +FooterLogo
+            .footer__body
+                each item in footerBodyList
+                    +FooterNavColumn(item).footer__column
+

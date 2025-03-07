@@ -1,0 +1,29 @@
+@import "@shared/styles";
+
+.simple-btn {
+  --bg: #{$color-red};
+  position: relative;
+
+  display: block;
+  padding: fluid-size(8, 16, $br-mobile, $br-max) fluid-size(16, 32, $br-mobile, $br-max);
+
+  color: $color-white;
+  font-weight: 700;
+  font-size: fluid-size(16, 24, $br-mobile, $br-max);
+  font-style: normal;
+  line-height: 120%;
+
+  text-align: center;
+
+  background: var(--bg, $color-red);
+
+  transition: background-color .15s ease;
+
+  @include hover {
+    --bg: #{$color-green};
+  }
+
+  @include mobile-active {
+    --bg: #{$color-green};
+  }
+}

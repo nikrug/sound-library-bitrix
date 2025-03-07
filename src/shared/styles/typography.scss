@@ -1,0 +1,35 @@
+@import "./function", "./mixns";
+
+%t-title {
+  font-size: 24px;
+  line-height: 1.5;
+
+  @include br-tablet {
+    font-size: 28px;
+  }
+
+  @include br-desktop {
+    font-size: 32px;
+  }
+
+  @include br-desktop-max {
+    font-size: 36px;
+  }
+}
+
+%t-simple-text {
+  font-size: 14px;
+  line-height: 1.5;
+
+  @include br-tablet {
+    font-size: 16px;
+  }
+
+  @include br-desktop {
+    font-size: 18px;
+  }
+
+  @include br-desktop-max {
+    font-size: 24px;
+  }
+}

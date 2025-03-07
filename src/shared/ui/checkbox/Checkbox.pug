@@ -1,0 +1,9 @@
+mixin Checkbox
+    .checkbox(class=`j-err_${attributes.formId}_${attributes.name}`)
+        input.checkbox__target(
+            name=attributes.name || ''
+            required=attributes.required || false
+            type="checkbox"
+        )
+        span.checkbox__label
+            block

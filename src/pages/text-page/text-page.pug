@@ -1,0 +1,81 @@
+extends  @shared/layout/some-layout/some-layout
+
+block variables
+    -
+        const title = 'About Page'
+        const breadcrumbs = ['breadcrumbs', 'about']
+        const {br} = require('@shared/styles/variables')
+block content
+    .container.text
+        h1 title
+        hr
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto aut cum delectus dolor ea, eius error expedita itaque, laborum nulla obcaecati perferendis repellat, reprehenderit saepe similique voluptatem. Fuga, ut.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi facilis incidunt ipsa nemo nulla porro sunt voluptas voluptatem. Assumenda blanditiis debitis eligendi, exercitationem fugiat illum ipsam iusto ratione veritatis! Laborum.
+        p
+            i Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam aliquid consequatur dicta dolor doloremque dolores eligendi error facere incidunt iusto perferendis, quaerat quam recusandae rem repellendus sit tenetur vel?
+        p
+            b Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda autem commodi consequuntur cupiditate eaque, esse incidunt itaque maiores numquam, omnis praesentium quam quis ratione suscipit veritatis vitae! Asperiores, libero.
+        p
+            u Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, aliquid animi aspernatur eius excepturi, exercitationem facere fuga incidunt iusto, necessitatibus officia quia quos repellat tempore veniam. Beatae dicta non odit!
+        p
+            del Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aspernatur assumenda deleniti dicta eos, explicabo fugiat iste laboriosam laudantium magnam molestiae officiis, porro qui repellendus sapiente sequi similique veniam?
+        p
+            sub Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dignissimos error et ex explicabo facere, fuga id libero magnam maiores minus mollitia natus nostrum officia, praesentium reprehenderit totam unde voluptate.
+        p
+            sup Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque cumque enim explicabo incidunt, labore nesciunt odio placeat quibusdam repellat repellendus reprehenderit soluta veritatis. Adipisci alias distinctio exercitationem iste nisi.
+        br
+        a(href='#' target='#') Some link
+        br
+        img(src='/public/images/paints/giraffe.svg')
+        a(href='#')
+            img(src='/public/images/paints/giraffe.svg')
+            //- возможен вариант событий когда картинка обернута в ссылку
+        ul
+            li Option 1
+            li Option 2
+            li Option 3
+            li Option 4
+            li Option 5
+            li Option 6
+            li Option 7
+            li Option 8
+            li Option 9
+        ol
+            li Option 1
+            li Option 2
+            li Option 3
+            li Option 4
+            li Option 5
+            li Option 6
+            li Option 7
+            li Option 8
+            li
+                p lint in list
+                ul
+                    li option 1
+                    li option 2
+                    li option 3
+
+
+        table
+            caption table title
+            tbody
+                tr
+                    th col 1
+                    th col 2
+                    th col 3
+                    th col 4
+                    th col 5
+                tr
+                    td cell 1
+                    td cell 2
+                    td cell 3
+                    td cell 4
+                    td cell 5
+
+                tr
+                    td cell 1
+                    td cell 2
+                    td cell 3
+                    td cell 4
+                    td cell 5

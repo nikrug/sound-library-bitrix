@@ -1,0 +1,395 @@
+
+.music-player{
+  
+position: relative;
+
+align-items: center;
+padding: 50px 16px;
+
+text-align: left;
+}
+
+ // TAB
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+  }
+  
+  .tab > input[type="radio"] {
+    display: none;
+
+  }
+  
+  .tab-content {
+    display: none;
+    gap: -0.625rem;
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  #tab-btn-1:checked ~ #content-1,
+  #tab-btn-2:checked ~ #content-2,
+  #tab-btn-3:checked ~ #content-3,
+  #tab-btn-4:checked ~ #content-4,
+  #tab-btn-5:checked ~ #content-5,
+  #tab-btn-6:checked ~ #content-6 {
+    display: block;
+
+  }
+
+  label{
+    display: flex; /* Использование flex для выравнивания элементов на одной строке */
+    align-items: center; /* Вертикальное выравнивание контейнера */
+  }
+  
+  .tab > label {
+    padding-top: 0;
+
+    text-decoration: none;
+
+    background: 0 0;
+    
+    cursor: pointer;
+
+    transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+  }
+
+  .music-player__input[type="checkbox"]::before{
+    display: inline-block;
+    width: 1.125rem;
+    height: 1.125rem; 
+
+    background-color:$pure-white;
+
+    border-radius: .1875rem; 
+
+    content: "";
+  }
+
+  .music-player__input[type="checkbox"]:checked::before {
+
+    background-color: $pure-white; 
+    background-image: url("/public/images/music-img/Vector.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%; 
+   }
+
+  .tab > label:hover {
+    padding-bottom: -2px;
+
+    font-weight: bold;
+
+    border-bottom: 2px solid $description-light;
+  }
+  
+  .tab > input[type="radio"]:checked + label {
+    color: $description-light;
+
+    font-weight: bold;
+
+    border-bottom: 2px solid $pure-black;
+  }
+
+
+ // PLAYER-SONG
+.play-pause-button{
+  margin-left:0;
+}
+
+.music-player__player-song{
+    display: flex;
+    gap:.575rem;
+    padding: 0.625rem 0.9rem 0.6rem 0.5rem;
+
+    border-bottom: 1px solid $blue-saturat;
+    
+}
+
+.music-player__player-text-box{
+  flex-direction: column;
+    margin-left:1.125rem;
+
+    text-align: left;
+}
+
+.music-player__player-img-box{
+    display: flex;
+    flex-direction: row;
+    margin-left:auto;
+
+}
+
+.show{
+  display: none;
+
+  visibility: hidden;
+}
+
+ // FILTER
+.filter{
+    position: absolute; /* Размещение относительно родительского элемента */
+    top: 6.875rem; /* Расположение сверху */
+    right:0; /* Расположение справа */
+    z-index: 100; /* Обеспечивает видимость над другими элементами */
+    
+    display: inline-block; /* Чтобы элемент мог занимать пространство */
+    margin-right: .9375rem;
+    padding: .625rem 1.5625rem;
+    overflow: auto; /* Позволяет прокручивать содержимое, если оно выходит за пределы */
+    
+    background-color:$pure-white;
+
+    visibility: hidden; /* Скрывает элемент по умолчанию */
+    opacity: 0; /* Прозрачность по умолчанию */
+
+    transition: opacity .4s, visibility .4s; /* Плавный переход */
+}
+
+.filter__show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.close{
+   margin-left: 90%;
+} 
+
+ // SLYDER STYLE
+.slider-styled,
+.slider-styled .noUi-handle {
+  box-shadow: none;
+}
+
+/* Hide markers on slider handles */
+.slider-styled .noUi-handle::before,
+.slider-styled .noUi-handle::after {
+  display: none;
+}
+
+.slider-styled .noUi-handle .noUi-touch-area {
+  position: absolute;
+  inset: -10px; /* Используем свойство 'inset' */
+
+  width: auto;
+  height: auto;
+
+  border: 1px solid transparent;
+}
+
+/* Show a border when hovering the area the handle responds to */
+.slider-styled .noUi-handle:hover .noUi-touch-area {
+  cursor: pointer;
+}
+
+#invert-connects {
+  height: 10px;
+  margin-top: 40px;
+}
+
+#invert-connects .noUi-connect {
+  background: $deep-blue;
+}
+
+#invert-connects .noUi-handle {
+  top: -3px;
+  right: -7px;
+
+  width: 14px;
+  height: 14px;
+
+  background: $deep-blue;
+
+  border: none;
+  border-radius: 9px;
+}
+
+.noUi-tooltip {
+  padding: 5px;
+
+  background-color: transparent;
+
+  border: none;
+
+  @include font-style(500, .75rem,1.25rem, $description-light)
+}
+
+ // MUSIC TEXT
+
+.music-player__title-text{
+    @include font-style(600, 1.25rem, 1.875rem, $dark-blue)
+  
+}
+
+.music-player__tab-text{
+    @include font-style(500, .875rem, 1.1875rem, $description-dark);
+
+    margin: 1rem 0 1rem 0.5rem;
+}
+
+.music-player__song-name-text{
+    @include font-style(500, .875rem, 1.1875rem, $dark-blue)
+}
+
+.music-player__time-text{
+    @include font-style(400, .75rem, 1.25rem, $description-dark)
+}
+
+ // FILTER TEXT
+
+.music-player__fiter-title-text{
+    @include font-style(500, 1rem, 1.375rem, $description-dark);
+
+    margin: -30px 0 20px;
+
+}
+
+.music-player__fiter-text{
+    @include font-style(400, .875rem, 1.5rem, $description-dark)
+}
+
+.music-player__fiter-category-text{
+    @include font-style(500, .875rem, 1.5rem, $deep-blue)
+}
+
+ // КНОПКИ ДЛЯ ФИЛЬТРА
+.filter__apply-button{
+    @include button-style(6.25rem,3.125rem,$deep-blue,none,.5rem);
+
+    margin-top: 1.875rem;
+    margin-left: 9.375rem;
+
+    @include font-style(500, .875rem, 1.5rem, $pure-white);
+}
+
+.filter__all-category-button{
+    width: 250px;
+    height: 44px;
+    margin: 40px 0 20px;
+
+    text-align: left;
+
+    background-color: $title-light;
+
+    border:1px solid $description-light;   
+    border-radius: 8px;
+}
+
+.filter__button{
+  display: block;
+  margin-left: auto;
+}
+
+.filter__button-tablet{
+  display: none;
+  margin-left: auto;
+}
+
+.filter__button-desktop{
+  display: none;
+  margin-left: auto;
+
+}
+
+.show-tablet{
+  display: none;
+}
+
+// @media(min-width:413px) {
+    // .filter{
+       //  top: 5rem; /* Расположение сверху */
+       // }
+// }
+
+@media(min-width:#{$br-tablet}px) {
+.music-player__player-text-box{
+    margin-right: 3rem;
+  }
+
+.music-player__player-song{
+  padding: 0.1rem 0.9rem 0.1rem 0.5rem;
+}
+
+.tab{
+  gap:1.2rem;
+}
+
+.filter__button{
+        
+        display: none;
+    }
+
+.filter__button-tablet{
+        
+        display: block;
+    }
+
+.show{
+    display: flex;
+
+    visibility: visible;
+}
+
+.filter{
+ top: 5rem; /* Расположение сверху */
+}
+
+.music-player{
+  padding: 3.125rem 3.6rem .125rem 4.5rem;
+  }
+
+  .music-player__player-img-box{
+    display: -webkit-box;;
+  }
+  } 
+  
+  @media(min-width:#{$br-desktop}px){
+    .show-tablet{
+      display: flex;
+    }
+
+    .music-player__player-song{
+      gap:4.875rem;
+
+      padding: 0.1rem 0.9rem 0.1rem 0.5rem;
+  }
+
+    .filter__button-tablet{
+        display: none;
+    }
+
+    .filter__button-desktop{
+        display: block;
+    }
+
+    .music-player__player-text-box{
+      flex-direction: column;
+
+      text-align: left;
+    }
+
+    .music-player__title-text{
+      @include font-style(600, 1.75rem, 1.875rem, $dark-blue)
+    
+  }
+  
+  .music-player__tab-text{
+      @include font-style(500, 1rem, 1.1875rem, $description-dark)
+  }
+  
+  .music-player__song-name-text{
+      @include font-style(500, 1rem, 1.1875rem, $dark-blue)
+  }
+
+  .music-player{
+    padding: 50px 100px;
+    }
+
+    .filter{
+      margin-right: 6.25rem;
+  }
+  }

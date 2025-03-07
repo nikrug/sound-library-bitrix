@@ -1,0 +1,33 @@
+@import "../../shared/styles/index";
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: dvh(100);
+  margin: 0;
+  overflow: hidden auto;
+
+  font-weight: 400;
+  font-family: $primary-font;
+  word-wrap: break-word;
+
+  html[class*='-lock'] & {
+    overflow: hidden;
+  }
+}
+
+
+.container {
+  padding: 0 22px 0 16px;
+}
+
+.text {
+  @include text-content;
+}
+
+@media(min-width:#{$br-tablet}px) {
+  .container{
+    padding: 0 65px 0 56px;
+  }
+}  

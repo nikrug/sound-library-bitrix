@@ -1,0 +1,33 @@
+.header-drop-menu {
+  height: 100%;
+
+  background: $dark-blue-menu;
+}
+
+.header-re {
+  height: 100%;
+
+  background:$blue-saturat; /* Убедитесь, что вы используете rgba без переменной не объявленной */
+
+  transition: opacity 1s; /* Плавный переход только для прозрачности */
+}
+
+
+@media(min-width:#{$br-tablet}px) {
+  .header-drop-menu {
+    height: 38%;
+  
+    background: $dark-blue-menu;
+  }
+  
+  .header-re {
+    height: 100%;
+  
+    background: $blue-saturat; /* Убедитесь, что вы используете rgba без переменной не объявленной */
+  
+    transition: opacity 1s; /* Плавный переход только для прозрачности */
+
+  }
+} 
+
+

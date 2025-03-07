@@ -1,0 +1,48 @@
+@use "sass:map";
+
+.main-example {
+  padding-bottom: 32px;
+
+  &__title {
+    @include text-overflow(1);
+
+    --fz: 32px;
+    margin-bottom: clamp(16px, 1.6rem, 32px);
+
+    font-size: var(--fz);
+  }
+
+  &--clamp &__title {
+    margin-bottom: clamp(16px, 1.6rem, 32px);
+
+    font-size: clamp(28px, 2.8rem, 32px);
+  }
+
+  &--static &__title {
+    margin-bottom: 16px;
+
+    font-size: 28px;
+  }
+
+  &__body {
+    @include infinite-grid(270px);
+    display: grid;
+    gap: 16px;
+    width: 100%;
+
+  }
+
+  @include br-tablet {
+    &__title {
+      margin-bottom: 32px;
+
+      --fz:32px;
+    }
+  }
+
+  @include br-desktop {
+    &__title {
+      --fz: 46px;
+    }
+  }
+}

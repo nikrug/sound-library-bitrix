@@ -1,0 +1,20 @@
+extends  @shared/layout/some-layout/some-layout
+
+block variables
+  -
+    const title = 'About Page'
+    const breadcrumbs = ['breadcrumbs', 'about']
+    const {listItems} = require('./constants')
+    const {br} = require('@shared/styles/variables')
+block content
+  +Section
+    picture
+      source(srcset='/public/images/pictures/example.webp', media=`(min-width: ${br.desktop}px)`)
+      img(src='/public/images/paints/giraffe.svg')
+    h1.about-content__title Welcome to Start Template
+    h2.about-content__subtitle This is Webpack + TS + SCSS + Pug base template.
+    p.about-content__text Before starting work, read the file README.md - it contains a description of the project structure and useful links for developers
+    +ItemList(listItems)
+    +Button.about-content__link(href='/') Go back to main page
+    span Нажимая на кнопку "Подтвердить заказ", вы принимаете условия
+      a(href="#" target="_blank") Публичной оферты

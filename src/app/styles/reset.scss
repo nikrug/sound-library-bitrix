@@ -1,0 +1,137 @@
+
+* {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  -webkit-tap-highlight-color: rgb($color-black, 0%);
+
+  &, &::before, &::after {
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  word-break: break-word;
+}
+
+
+header {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+
+  border: 0;
+}
+
+button {
+  margin: 0;
+
+  color: inherit;
+
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+nav, footer, header {
+  display: block;
+}
+
+
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+
+  cursor: pointer;
+
+  &, &:visited, &:hover {
+    text-decoration: none;
+  }
+
+  &:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+
+:focus, :active {
+  outline: none;
+}
+
+
+
+textarea, select {
+  &, &:focus-visible, &:active, &:hover, &:focus {
+    outline: none;
+    outline-offset: 0;
+    box-shadow: none;
+
+    resize: none;
+  }
+
+  &::placeholder {
+    font-weight: inherit;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+
+input {
+  &, &:focus-visible, &:active, &:hover, &:focus {
+    outline: none;
+    outline-offset: 0;
+    box-shadow: none;
+
+    resize: none;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::placeholder {
+    font-weight: inherit;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 3rem $color-white inset !important;/* stylelint-disable-line */ /* блокирует синий фон автокомплита в хроме*/
+  }
+}
+
+
+nav, footer, header, aside {
+  display: block;
+}
+
+main {
+  flex: 1 0 100%;
+}

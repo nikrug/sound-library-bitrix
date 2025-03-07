@@ -1,0 +1,120 @@
+@import "./function";
+
+
+@mixin text-content {
+  @extend %t-simple-text; // не забывать стили для текста без тегов
+
+
+  hr {
+    border-bottom: 1px solid $c-black;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @extend %t-title;
+    margin-bottom: .5em;
+  }
+
+  p {
+    margin-bottom: .5em;
+  }
+
+  a {
+    margin-bottom: .5em;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+
+  // стили списков
+  ul {
+    margin-bottom: 32px;
+
+    & > li {
+      position: relative;
+
+      padding-left: 20px;
+
+      &::before {
+        --size: 7px;
+        position: absolute;
+        top: 6px;
+        left: 0;
+
+        width: var(--size);
+        height: var(--size);
+
+        background: $c-black;
+        border-radius: 50%;
+
+        content: '';
+      }
+    }
+  }
+
+
+  ol {
+    counter-reset: counter;
+
+    > li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+
+      & > * {
+        grid-column: 2 / 3;
+      }
+
+      &::before {
+        content: counter(counter) '. ';
+        counter-increment: counter;
+      }
+    }
+  }
+
+
+  // стили таблицы
+  table {
+    position: relative;
+
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+
+    border-collapse: collapse;
+  }
+
+  caption {
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    display: block;
+  }
+
+  tbody {
+    border: 1px solid;
+  }
+
+  th {
+    font-weight: 600;
+    text-align: start;
+
+    border-bottom: 1px solid;
+  }
+
+  th, td {
+    box-sizing: border-box;
+    min-width: 100px;
+    padding: 4px;
+
+    &:not(:last-child) {
+      border-right: 1px solid;
+    }
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+}

@@ -1,0 +1,29 @@
+mixin FieldSelect(props)
+    -
+        const { options = [], formId, name, placeholder, required } = attributes || {};
+        const errorClass = `j-err_${formId}_${name}`;
+
+    .field-select.j-field-select(class=errorClass)
+        .field-select__body
+            // для открытия/закрытия
+            input.field-select__header.j-display-value(
+                data-label=placeholder
+                type='checkbox'
+            )
+            .field-select__option-list.j-option-list
+                input.field-select__option(
+                    type='radio'
+                    name=name
+                    value=''
+                    data-label=placeholder
+                    required=required
+                )
+                each option, index in options
+                    input.field-select__option(
+                        type='radio'
+                        name=name
+                        value=`SOME_VALUE_${index}`
+                        data-label=option.label
+                        required=required
+                    )
+        span.field-select__error-message(class=`${errorClass}_TEXT`)

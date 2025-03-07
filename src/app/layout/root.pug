@@ -1,0 +1,24 @@
+include @shared/ui/index
+include @entities/index
+include @widgets/index
+block variables
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title=title || 'default title'
+        link(rel='shortcut icon', href=require('@app/favicon.ico'), type='image/x-icon')
+        link(href=require('@app/styles/index.scss') rel="stylesheet")
+        script(defer src="/public/scripts/jquery-3.7.1.js")
+        script(defer src="/public/scripts/jquery.form.min.js")
+        script(defer src='/public/scripts/jquery.mask.js')
+        script(defer src='/public/scripts/jquery-validation.js')
+        script(defer src='/public/scripts/ajax.form.js')
+        script(defer src='/public/scripts/ajax.pagination.js')
+        script(defer src=require('@app'))
+    body
+        block default
+
+

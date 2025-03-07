@@ -1,0 +1,22 @@
+extends  @shared/layout/default/default
+include ../header/header.pug
+include ../production-house/production-house.pug
+include ../music-player/music-player.pug
+include ../music-player/music-player-song.pug
+include ../brouse-by-category/brouse-by-category.pug
+include ../why-us/why-us.pug
+include ../download-sound/download-sound.pug
+include ../testimonials/testimonials.pug
+block variables
+  -
+    const title = 'Welcome to Start Template'
+    const breadcrumbs = ['breadcrumbs', 'index']
+block content
+  +Header 
+  +production
+  +music-player
+  +brouse-by-category
+  +why-us
+  +download-sound
+  +testimonials
+

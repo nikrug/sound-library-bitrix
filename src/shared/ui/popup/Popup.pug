@@ -1,0 +1,9 @@
+mixin Popup(props)
+    .popup.j-popup(class!=attributes.class)
+        .popup__content
+            .popup__header
+                h3.popup__title!=attributes.title
+                button.popup__close.j-popup-close &#10006;
+            .popup__body
+                block
+

@@ -1,0 +1,30 @@
+@import "@shared/styles";
+
+.simple-btn {
+ 
+  position: relative;
+
+  display: block;
+  width: 78px;
+  height: 3.125rem;
+
+  font-family: $primary-font;
+  text-align: center;
+
+  background-color:$deep-blue ;
+
+  @include font-style(500, .875rem, 1.5rem, $pure-white);
+
+  border: none ;
+  border-radius: 8px;
+  
+  transition: background-color .15s ease;
+
+  @include hover {
+    --bg: #{$color-green};
+  }
+
+  @include mobile-active {
+    --bg: #{$color-green};
+  }
+}

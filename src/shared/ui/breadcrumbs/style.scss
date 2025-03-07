@@ -1,0 +1,16 @@
+.breadcrumbs {
+  color: $color-black;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: $primary-font;
+  font-style: normal;
+  line-height: 20px;
+
+  &__link{
+    color: inherit;
+
+    &:last-child{
+      pointer-events: none;
+    }
+  }
+}

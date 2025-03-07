@@ -1,0 +1,18 @@
+import { Configuration } from 'webpack'
+import { BuildOptions } from './types'
+
+export function buildResolvers (options: BuildOptions):Configuration['resolve'] {
+  return {
+    extensions: ['.ts', '.js', '.scss', '.json', '.css'],
+    alias: {
+      '@src': options.paths.src,
+      '@app': options.paths.app,
+      '@pages': options.paths.pages,
+      '@images': options.paths.images,
+      '@shared': options.paths.shared,
+      '@widgets': options.paths.widgets,
+      '@fonts': options.paths.fonts,
+      '@entities': options.paths.entities
+    }
+  }
+}

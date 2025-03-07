@@ -1,0 +1,18 @@
+mixin MainExample(props)
+    -
+        const {
+            theme
+        } = props || {}
+        const {
+            exampleItems,
+            mainTitle,
+        } = require('./constants') 
+        const classes = {
+            [`main-example--${theme}`]: theme,
+        }
+    section.main-example.j-main-example(class=classes)
+        h1.main-example__title=mainTitle
+        .main-example__body
+            each item in exampleItems
+                .main-example__item
+                    +ExampleItem(item)

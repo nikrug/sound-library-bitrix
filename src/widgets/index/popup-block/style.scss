@@ -1,0 +1,8 @@
+.popup-block{
+  &__actions{
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    width: 100%;
+  }
+}

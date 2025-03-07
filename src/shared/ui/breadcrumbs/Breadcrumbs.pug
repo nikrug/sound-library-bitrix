@@ -1,0 +1,6 @@
+mixin Breadcrumbs(arr)
+    span.breadcrumbs
+        each item,index in arr
+            a.breadcrumbs__link(href=item.href || '#')=item
+            if arr.length - 1 !== index
+                !='&nbsp;/&nbsp;'

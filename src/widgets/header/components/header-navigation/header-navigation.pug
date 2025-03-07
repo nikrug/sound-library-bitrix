@@ -1,0 +1,9 @@
+mixin HeaderNavigation
+    -
+        const {navList} = require('./config')
+    ul.header-nav
+        each item in navList
+            li
+                a(href=item.link)=item.label
+    
+        +PopupBlock

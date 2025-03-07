@@ -1,0 +1,45 @@
+.header-nav {
+  display: grid;
+  grid-gap: 16px; /* Промежуток между элементами */
+  grid-template-columns: 1fr; /* Одна колонка, столбец */
+  align-items: start; /* Центрирование элементов по вертикали */
+  padding: 1.3rem 1rem;
+
+  color: $description-light;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+
+  cursor: pointer;
+  
+}
+
+a:hover {
+  color:$pure-white; /* Цвет при наведении */
+}
+
+@media(min-width:#{$br-tablet}px) {
+  .header-nav{
+    padding: 1.3rem 5rem;
+  }
+} 
+
+@media(min-width:#{$br-desktop}px){
+  .header-nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    gap: 16px;
+    align-items: center;
+    justify-content: end;
+    padding: 0;
+
+    @include font-style(500, 1rem, 1.5rem, $description-light);
+
+    cursor: pointer;
+  }
+
+  
+}
+
+

@@ -1,0 +1,14 @@
+include components/index
+mixin Controller
+    header.header.j-header
+        //- j-header-size считает высоту шапки
+        .header__wrapper.j-header-size
+            .header__container.container
+                .header__logo
+                    +HeaderLogo
+                .header__burger
+                    +Burger
+                nav.header__nav
+                    +HeaderNavigation
+        .header__drop.j-drop-menu
+            +HeaderDropMenu

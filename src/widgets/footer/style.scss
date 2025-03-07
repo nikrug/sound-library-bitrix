@@ -1,0 +1,64 @@
+@import "./components/style";
+
+.footer {
+  padding: 2.5rem 0 4rem;
+
+  background-color: $dark-blue;
+  
+  &__container {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__copy {
+    text-align: right;
+  }
+
+  &__body {
+    @include infinite-grid(100px);
+
+    display: grid;
+    grid-gap: 16px;
+    gap: 16px;
+    row-gap: 2rem;
+  }
+}
+
+
+
+@media(min-width:#{$br-tablet}px) {
+  .footer {
+    padding: 2.3rem 0 4rem;
+    
+    &__body {
+
+      gap: 130px;
+
+    }
+  }
+} 
+
+@media(min-width:#{$br-desktop}px){
+  .footer {
+    padding: 8px;
+  
+    background-color: $dark-blue;
+    
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Создает 3 равные колонки */
+      gap: 12px;   
+    }
+  
+    &__copy {
+      text-align: right;
+    }
+  
+    &__body {
+      @include infinite-grid(200px);
+      display: grid;
+      gap: 16px;
+    }
+  }
+  
+}
