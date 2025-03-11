@@ -74,7 +74,7 @@ text-align: center;
 
     z-index: 0; /* Установим z-index ниже, чем у текста */
 
-    background-color: $pure-white; /* Цвет внутреннего круга по умолчанию */
+    background-color: $title-light; /* Цвет внутреннего круга по умолчанию */
 
     border-radius: 50%; /* Делаем псевдоэлемент круглым */
 
@@ -173,5 +173,13 @@ text-align: center;
 @media(min-width:#{$br-desktop}px){
     .show-experiens-desctop{
         display: block;
+    }
+
+    .experiens {
+        padding: 3.7rem 1.25rem 7.5rem;
+    }
+
+    .experiens__customer{
+        margin: 1rem 1rem 0;
     }
   }

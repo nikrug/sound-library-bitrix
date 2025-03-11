@@ -7,10 +7,12 @@ include ../brouse-by-category/brouse-by-category.pug
 include ../why-us/why-us.pug
 include ../download-sound/download-sound.pug
 include ../testimonials/testimonials.pug
+
 block variables
   -
     const title = 'Welcome to Start Template'
     const breadcrumbs = ['breadcrumbs', 'index']
+    
 block content
   +Header 
   +production
@@ -19,4 +21,5 @@ block content
   +why-us
   +download-sound
   +testimonials
+
 

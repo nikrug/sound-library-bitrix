@@ -3,15 +3,15 @@ mixin music-player-song
         audio.audio(src="/public/music/daisuke.mp3")
         img.play-pause-button(src="/public/images/music-img/play-button.svg" alt="Play/Pause")
 
-        div.music-player__player-text-box
+        div.music-player__player-text-box.no-wrap
             p.music-player__song-name-text Sound name
             p.music-player__time-text 0:12
 
         div.music-player__player-text-box.show-tablet
-            p.music-player__tab-text Confused excited crowd slight 
-            p.music-player__tab-text panic and distress
+            p.music-player__tab-text Confused excited crowd slight panic and distress
+           
 
-        div.music-player__player-text-box.show
+        div.music-player__player-text-box.show.no-wrap
             p.music-player__tab-text Shocking, jumpscare
 
         div.music-player__player-img-box

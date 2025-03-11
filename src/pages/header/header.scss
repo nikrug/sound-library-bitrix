@@ -22,7 +22,7 @@ input[type="checkbox"] {
     width: 1.125rem;
     height: 1.125rem; 
 
-    background-color: $title-light;
+    background-color: $pure-white;
 
     border-radius: .1875rem; 
 
@@ -30,7 +30,7 @@ input[type="checkbox"] {
    }
    
    input[type="checkbox"]:checked::before {
-    background-color: $title-light; 
+    background-color: $pure-white; 
     background-image: url("/public/images/music-img/Vector.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -439,6 +439,10 @@ height: 1.5rem;
   }
 
   @media(min-width:#{$br-desktop}px){
+    .header__search {
+        padding: 98px 45px 95px;
+    }
+
     .modal{
         align-items: center;
 

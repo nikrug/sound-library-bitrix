@@ -22,6 +22,7 @@
     gap: 16px;
     row-gap: 2rem;
   }
+
 }
 
 
@@ -40,13 +41,13 @@
 
 @media(min-width:#{$br-desktop}px){
   .footer {
-    padding: 8px;
+    padding: 3rem 1rem 3rem 0;
   
     background-color: $dark-blue;
     
     &__container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Создает 3 равные колонки */
+      grid-template-columns: 40% 60%; /* Создает 3 равные колонки */
       gap: 12px;   
     }
   
@@ -55,10 +56,12 @@
     }
   
     &__body {
-      @include infinite-grid(200px);
+      @include infinite-grid(100px);
       display: grid;
-      gap: 16px;
+      gap: 135px;
+      padding: 0.5rem 0 0 2rem;
     }
+
   }
   
 }

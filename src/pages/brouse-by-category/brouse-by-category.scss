@@ -1,5 +1,5 @@
 .categoryes{
-    padding: 2.5rem 1rem;
+    padding: 1.5rem 1rem 2.5rem;
 }
 
 .categoryes__img{
@@ -78,11 +78,11 @@ margin:.625rem 0 .3125rem;
     $image-scale: 13vw; 
     
     .categoryes{
-        padding: 3.75rem 6.3125rem;
+        padding: 0 6.3125rem;
     }
 
     .categoryes__img-box{
-    grid-template-columns: repeat(auto-fill, minmax(13.9vw, 1fr)); // Автоматическое заполнение
+    grid-template-columns: repeat(auto-fill, minmax(12vw, 1fr)); // Автоматическое заполнение
     }
 
 
@@ -96,6 +96,11 @@ margin:.625rem 0 .3125rem;
     }
 
     .categoryes__img-text{
-        @include font-style(600, 1.125rem, 1.875rem, $title-light );
+        @include font-style(600, 1rem, 1.875rem, $title-light );
+        white-space: nowrap;
+    }
+
+    .categoryes__title-text{
+        margin-bottom: 1rem;
     }
   }

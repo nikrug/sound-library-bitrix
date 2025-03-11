@@ -87,7 +87,7 @@ text-align: center;
         grid-template-columns: repeat(2, 1fr);
         align-items: start;
         justify-content: start;
-        padding:3.75rem 6.25rem;
+        padding: 7.75rem 6.25rem 4.7rem
 
 
     }
@@ -107,10 +107,12 @@ text-align: center;
 
         .why-us__text-block{
             width: 23.0625rem;
+        
         }
 
         .why-us__text-box{
-            gap: clamp(40px, 3vw + 20px, 140px);
+            gap:70px;
+            row-gap: 25px;
         }
 
   }

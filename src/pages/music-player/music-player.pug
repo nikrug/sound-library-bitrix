@@ -1,4 +1,9 @@
 mixin music-player
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css")
+    block scripts
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js")
+    script.
+    
     div.music-player
         div.music-player__title-text Best sound effects for youtube videos
 
@@ -22,6 +27,7 @@ mixin music-player
             img.filter__button-tablet.filter__open(src="/public/images/music-img/filter_tablet.svg")
             
             img.filter__button-desktop.filter__open(src="/public/images/music-img/filter_desctop.svg")
+
             .tab-content#content-1
                 +music-player-song
                 +music-player-song
@@ -45,24 +51,22 @@ mixin music-player
                 +music-player-song
             .tab-content#content-6
                 +music-player-song
-        div.music-player__filter.filter
-            span.filter__close.close 
-                img(src="/public/images/music-img/close_button.svg")
-            p.fiter__title-text Filter
+            div.music-player__filter.filter
+                span.filter__close.close 
+                    img(src="/public/images/music-img/close_button.svg")
+                    p.fiter__title-text Filter
 
-            p.fiter__text Duration
-            div.slider-styled#invert-connects
-            button.filter__all-category-button.fiter__category-text All Category
-            label
-                input(type="checkbox" name="subscribe")
-                p.filter__text Only free sounds
-            label
-                input(type="checkbox" name="favorite")
-                p.filter__text Only my favorite sounds
-            button.filter__apply-button Apply
-
-
-                            +music-player-song
-    a.music-link-text(href="#") See all sound effects
+                p.fiter__text Duration
+                 div.slider-styled#invert-connects
+                button.filter__all-category-button.fiter__category-text All Category
+                label
+                    input(type="checkbox" name="subscribe")
+                    p.filter__text Only free sounds
+                label
+                    input(type="checkbox" name="favorite")
+                    p.filter__text Only my favorite sounds
+                button.filter__apply-button Apply
+        a.music-link-text(href="#") See all sound effects
+       
 
 

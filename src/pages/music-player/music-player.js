@@ -54,7 +54,7 @@ function changeColor(event) {
 }
 
 function formatTime(value) {
-    const pad = (n) => ('0' + n).slice(-2);
+    const pad = (n) => ( '0' + n ).slice(-2);
     const mins = Math.floor(value);
     return `${pad(Math.floor(mins / 60))}:${pad(mins % 60)}`;
 }

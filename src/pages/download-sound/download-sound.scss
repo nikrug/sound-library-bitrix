@@ -108,6 +108,8 @@ text-align: center
     }
 
     .download{
+        justify-items: center;
+
         padding: 3.725rem 5rem 0;
     }
 
@@ -151,11 +153,11 @@ text-align: center
     }
 
     .download__basic-card{
-        padding: 2rem;
+        padding: 1.4rem 1rem 1rem 2rem;
     }
 
    .download__premium-card{
-    padding: 2rem;
+    padding: 1.5rem 2rem 3rem 3rem;
    }
 
     .download__description-text{
@@ -177,5 +179,9 @@ text-align: center
         .download__free-margin{
         margin: 3rem 0 1.1rem;
     }
+
+    .download__bottom-text{
+        padding: 0 0 4.5rem;
+    };
   }
 

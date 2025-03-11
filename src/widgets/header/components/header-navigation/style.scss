@@ -29,12 +29,12 @@ a:hover {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: auto;
-    gap: 16px;
+    gap: 38px;
     align-items: center;
     justify-content: end;
     padding: 0;
 
-    @include font-style(500, 1rem, 1.5rem, $description-light);
+    @include font-style(500, .9rem, 1.5rem, $description-light);
 
     cursor: pointer;
   }
