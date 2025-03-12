@@ -54,16 +54,15 @@ mixin music-player
             div.music-player__filter.filter
                 span.filter__close.close 
                     img(src="/public/images/music-img/close_button.svg")
-                    p.fiter__title-text Filter
-
+                p.fiter__title-text Filter
                 p.fiter__text Duration
                  div.slider-styled#invert-connects
                 button.filter__all-category-button.fiter__category-text All Category
                 label
-                    input(type="checkbox" name="subscribe")
+                    input.music-player__input(type="checkbox" name="subscribe")
                     p.filter__text Only free sounds
                 label
-                    input(type="checkbox" name="favorite")
+                    input.music-player__input(type="checkbox" name="favorite")
                     p.filter__text Only my favorite sounds
                 button.filter__apply-button Apply
         a.music-link-text(href="#") See all sound effects

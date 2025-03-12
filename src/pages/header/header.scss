@@ -22,19 +22,23 @@ input[type="checkbox"] {
     width: 1.125rem;
     height: 1.125rem; 
 
-    background-color: $pure-white;
+    background-color: $title-light;
 
     border-radius: .1875rem; 
+
+    cursor: pointer;
 
     content: "";
    }
    
    input[type="checkbox"]:checked::before {
-    background-color: $pure-white; 
+    background-color: $title-light; 
     background-image: url("/public/images/music-img/Vector.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%; 
+
+    cursor: pointer;
    }
 
 .header__menu{
@@ -156,12 +160,22 @@ text-align: left;
     @include font-style(600, 1rem, 1.5rem, $deep-blue);
 }
 
+.modal__sign-up-text:hover{
+    @include font-style(600, 1rem, 1.5rem, $dark-blue);
+}
+
 .modal__transparent-text{
     @include font-style(500, 1rem, 1.75rem, $description-light);
 }
 
+.modal__transparent-text:hover{
+    @include font-style(500, 1rem, 1.75rem, $description-dark);
+}
+
 .modal__login-icons{
 margin-right: 20px;
+
+cursor: pointer;
 }
 
 

@@ -60,6 +60,7 @@ text-align: left;
 
   .music-player__input[type="checkbox"]::before{
     display: inline-block;
+
     width: 1.125rem;
     height: 1.125rem; 
 
@@ -67,16 +68,19 @@ text-align: left;
 
     border-radius: .1875rem; 
 
+    cursor: pointer;
+
     content: "";
   }
 
   .music-player__input[type="checkbox"]:checked::before {
-
     background-color: $pure-white; 
     background-image: url("/public/images/music-img/Vector.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%; 
+
+    cursor: pointer;
    }
 
   .tab > label:hover {
@@ -99,6 +103,9 @@ text-align: left;
  // PLAYER-SONG
 .play-pause-button{
   margin-left:0;
+
+  cursor: pointer;
+
 }
 
 .music-player__player-song{
@@ -133,10 +140,9 @@ text-align: left;
  // FILTER
 .filter{
     position: absolute; /* Размещение относительно родительского элемента */
-    top: 6.875rem; /* Расположение сверху */
     right:0; /* Расположение справа */
-    z-index: 100; /* Обеспечивает видимость над другими элементами */
-
+    z-index: 1; /* Обеспечивает видимость над другими элементами */
+   
     
     display: inline-block; /* Чтобы элемент мог занимать пространство */
     margin-right: .9375rem;
@@ -158,6 +164,8 @@ text-align: left;
 
 .close{
    margin-left: 90%;
+
+   cursor: pointer;
 } 
 
  // SLYDER STYLE
@@ -246,6 +254,14 @@ text-align: left;
     @include font-style(400, .75rem, 1.25rem, $description-dark)
 }
 
+.music-link-text{
+  @include font-style(600, .85rem, 1.5rem,  $deep-blue)
+}
+
+.music-link-text:hover{
+  @include font-style(600, .85rem, 1.5rem,  $dark-blue)
+}
+
  // FILTER TEXT
 
 .music-player__fiter-title-text{
@@ -289,17 +305,24 @@ text-align: left;
 .filter__button{
   display: block;
   margin-left: auto;
+
+  cursor: pointer;
+
 }
 
 .filter__button-tablet{
   display: none;
   margin-left: auto;
+
+  cursor: pointer;
+
 }
 
 .filter__button-desktop{
   display: none;
   margin-left: auto;
 
+  cursor: pointer;
 }
 
 .show-tablet{
@@ -308,6 +331,10 @@ text-align: left;
 
 .no-wrap{
   white-space: nowrap;
+}
+
+.img-download{
+  cursor: pointer;
 }
 
 // @media(min-width:413px) {
@@ -349,6 +376,8 @@ text-align: left;
     display: flex;
 
     visibility: visible;
+
+    cursor: pointer;
 }
 
 .filter{
