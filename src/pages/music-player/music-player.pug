@@ -52,12 +52,16 @@ mixin music-player
             .tab-content#content-6
                 +music-player-song
             div.music-player__filter.filter
-                span.filter__close.close 
+                .filter__close.close 
+                    p.fiter__title-text Filter
                     img(src="/public/images/music-img/close_button.svg")
-                p.fiter__title-text Filter
+                    
                 p.fiter__text Duration
                  div.slider-styled#invert-connects
-                button.filter__all-category-button.fiter__category-text All Category
+                select.filter__all-category-button.fiter__category-text
+                 option.zxzx All categores
+                 option.zxzxx z,z,z 
+                 option.zxzxxx z,z,z 
                 label
                     input.music-player__input(type="checkbox" name="subscribe")
                     p.filter__text Only free sounds

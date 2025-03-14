@@ -63,6 +63,7 @@ text-align: left;
 
     width: 1.125rem;
     height: 1.125rem; 
+    margin: 0 1rem 0 0;
 
     background-color:$pure-white;
 
@@ -111,9 +112,12 @@ text-align: left;
 .music-player__player-song{
     display: flex;
     gap:.575rem;
+    align-items: center;
     padding: 0.625rem 0.9rem 0.6rem 0.5rem;
 
     border-bottom: 1px solid $blue-saturat;
+
+ 
     
 }
 
@@ -146,7 +150,7 @@ text-align: left;
     
     display: inline-block; /* Чтобы элемент мог занимать пространство */
     margin-right: .9375rem;
-    padding: 0.625rem 1.5625rem 0.625rem 1.3rem;
+    padding: 0 1rem 1.5rem;
     overflow: auto; /* Позволяет прокручивать содержимое, если оно выходит за пределы */
     
     background-color:$title-light;
@@ -162,8 +166,28 @@ text-align: left;
     opacity: 1;
 }
 
+.filter__text{
+  @include font-style(400, .875rem, 1.875rem, $description-dark);
+
+}
+
+.fiter__text{
+  @include font-style(400, .875rem, 1.875rem, $description-dark);
+
+  margin:0 0 1rem;
+}
+
+
+.fiter__title-text{
+  @include font-style(500, 1rem, 1.875rem, $description-dark);
+
+  margin: 0 auto 0 0;
+}
+
 .close{
-   margin-left: 90%;
+   display: flex;
+   align-items: center;
+   margin: 0 0 0.6rem;
 
    cursor: pointer;
 } 
@@ -196,7 +220,7 @@ text-align: left;
  
  #invert-connects {
    height: 4px;
-   margin-top: 40px;
+   margin-top: 25px;
    overflow: visible; /* Allow tooltips to be visible */
 
    border: none;
@@ -281,26 +305,33 @@ text-align: left;
 
  // КНОПКИ ДЛЯ ФИЛЬТРА
 .filter__apply-button{
-    @include button-style(6.25rem,3.125rem,$deep-blue,none,.5rem);
+    @include button-style(5.0625rem,2.75rem,$deep-blue,none,.5rem);
 
-    margin-top: 1.875rem;
-    margin-left: 9.375rem;
+    margin-top: 2.2rem;
+    margin-left: 10.2rem;
 
     @include font-style(500, .875rem, 1.5rem, $pure-white);
+
+    font-family: $primary-font;
 }
 
 .filter__all-category-button{
     width: 250px;
     height: 44px;
-    margin: 40px 0 20px;
-
+    margin: 40px 0 25px;
+    padding: 0 0 0 1rem;
+    
+    font-family: $primary-font;
     text-align: left;
 
     background-color: $title-light;
 
     border:1px solid $description-light;   
     border-radius: 8px;
+
+    @include font-style(500, .875rem, 1.5rem, $deep-blue);
 }
+
 
 .filter__button{
   display: block;
