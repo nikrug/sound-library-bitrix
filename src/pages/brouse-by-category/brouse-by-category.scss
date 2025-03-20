@@ -1,5 +1,7 @@
 .categoryes{
     padding: 1.5rem 1rem 2.5rem;
+    margin: auto;
+    max-width: 1900px;
 }
 
 .categoryes__img-box {
@@ -24,6 +26,8 @@
     height: 70px; /* Занимает всю высоту родителя */
 
     border-radius: .5rem; 
+
+    cursor: pointer;
 }
 
 .categoryes__title-text{

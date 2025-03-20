@@ -11,9 +11,7 @@
 
   transition: transform .3s;
 
-  &._hidden {
-    transform: translateY(-100%);
-  }
+
 
   &__wrapper {
     position: relative;

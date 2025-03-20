@@ -56,10 +56,10 @@
     }
   
     &__body {
-      @include infinite-grid(100px);
-      display: grid;
-      gap: 135px;
-      padding: 0.5rem 0 0 2rem;
+      margin-left: auto;
+      display: flex;
+
+      gap: 4rem;
     }
 
   }

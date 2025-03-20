@@ -10,12 +10,13 @@
   font-size: 0.875rem;
   line-height: 1.5rem;
 
-  cursor: pointer;
+
   
 }
 
 a:hover {
   color:$pure-white; /* Цвет при наведении */
+  cursor: pointer;
 }
 
 @media(min-width:#{$br-tablet}px) {
@@ -36,7 +37,7 @@ a:hover {
 
     @include font-style(500, .9rem, 1.5rem, $description-light);
 
-    cursor: pointer;
+    
   }
 
   

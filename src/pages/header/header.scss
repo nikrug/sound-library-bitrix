@@ -168,13 +168,15 @@ text-align: left;
     @include font-style(500, 1rem, 1.75rem, $description-light);
 }
 
+.modal__use-email-text{
+    @include font-style(500, 1rem, 1.75rem, $description-light);
+}
+
 .modal__transparent-text:hover{
     @include font-style(500, 1rem, 1.75rem, $description-dark);
 }
 
 .modal__login-icons{
-margin-right: 20px;
-
 cursor: pointer;
 }
 
@@ -186,7 +188,9 @@ cursor: pointer;
 .menu__text:hover {
     color:$pure-white; /* Цвет при наведении */
 }
-
+.remember-margin{
+    margin: 0 0 0 .5rem;
+}
  // модальное окно
 .modal{
     position:fixed;
@@ -229,6 +233,7 @@ opacity: 1;
 display: flex;
 flex-direction: row;
 height: 1.5rem;
+gap: 1.5rem;
 }
 
 .modal__login-form{
