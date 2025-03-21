@@ -1,9 +1,8 @@
 @import "form-page/index";
-@import "header/header";
-@import "production-house/production-house";
-@import "music-player/music-player";
-@import "brouse-by-category/brouse-by-category";
-@import "why-us/why-us";
-@import "download-sound/download-sound";
-@import "testimonials/testimonials";
-@import 'music-player/nouislider.min';
+@import "index/modules/production-house/production-house";
+@import "index/modules/music-player/music-player";
+@import "index/modules/brouse-by-category/brouse-by-category";
+@import "index/modules/why-us/why-us";
+@import "index/modules/download-sound/download-sound";
+@import "index/modules/testimonials/testimonials";
+@import 'index/modules/music-player/nouislider.min';

@@ -1,5 +1,5 @@
 import './index/index'
 import './header/headerController'
-import '../pages/music-player/music-player.js'
-import '../pages/testimonials/testimonials.js'
-import '../pages/music-player/nouislider.min.js'
+import '../pages/index/modules/music-player/music-player.js'
+import '../pages/index/modules/testimonials/testimonials.js'
+import '../pages/index/modules/music-player/nouislider.min.js'

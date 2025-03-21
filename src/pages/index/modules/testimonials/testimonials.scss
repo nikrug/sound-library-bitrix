@@ -144,6 +144,32 @@ text-align: center;
     @include font-style(500, .875rem, 1.5rem, $description-light);
 }
 
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    width: 100%;
+    position: relative;
+    margin: 2rem 0 0 0;
+
+}
+.swiper{
+    margin: auto;
+    max-width: 1900px;
+}
+.swiper-backface-hidden .swiper-slide {
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+    background-color: $description-dark;
+
+}
+
 @media(min-width:#{$br-tablet}px) {
     .experiens{
         padding: 3.125rem 1.25rem 4.2rem;

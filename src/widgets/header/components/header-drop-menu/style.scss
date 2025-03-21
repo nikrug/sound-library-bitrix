@@ -15,7 +15,7 @@
 
 @media(min-width:#{$br-tablet}px) {
   .header-drop-menu {
-    height: 38%;
+    height: 50%;
   
     background: $dark-blue-menu;
   }
@@ -28,6 +28,17 @@
     transition: opacity 1s; /* Плавный переход только для прозрачности */
 
   }
+} 
+
+@media(min-width:#{$br-desktop}px) {
+ .show-desctop{
+  display: none;
+ }
+
+ .header-re {
+  display: none;
+
+}
 } 
 
 

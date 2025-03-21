@@ -3,7 +3,7 @@
   grid-gap: 16px; /* Промежуток между элементами */
   grid-template-columns: 1fr; /* Одна колонка, столбец */
   align-items: start; /* Центрирование элементов по вертикали */
-  padding: 1.3rem 1rem;
+  padding: 5rem 1rem;
 
   color: $description-light;
   font-weight: 500;
@@ -21,7 +21,7 @@ a:hover {
 
 @media(min-width:#{$br-tablet}px) {
   .header-nav{
-    padding: 1.3rem 5rem;
+    padding: 5rem 5rem;
   }
 } 
 
