@@ -43,6 +43,7 @@ text-align: left;
   label{
     display: flex; /* Использование flex для выравнивания элементов на одной строке */
     align-items: center; /* Вертикальное выравнивание контейнера */
+    margin-bottom: .1rem;
   }
   
   .tab > label {
@@ -63,7 +64,7 @@ text-align: left;
 
     width: 1.125rem;
     height: 1.125rem; 
-    margin: 0 1rem 0 0;
+    margin: 0 .7rem 0 0.1rem;
 
     background-color:$pure-white;
 
@@ -84,10 +85,6 @@ text-align: left;
     cursor: pointer;
    }
 
-  .tab > label:hover {
-    
-
-  }
   
   .tab > input[type="radio"]:checked + label {
     color: $pure-black;
@@ -146,16 +143,21 @@ text-align: left;
    
     
     display: inline-block; /* Чтобы элемент мог занимать пространство */
+    width: 288px;
+    height: 377px;
     margin-right: .9375rem;
-    padding: 0 1rem 1.5rem;
+    padding: 0.3rem 1.3rem;
     overflow: auto; /* Позволяет прокручивать содержимое, если оно выходит за пределы */
     
     background-color:$title-light;
+
+    border-radius: 4px;
 
     visibility: hidden; /* Скрывает элемент по умолчанию */
     opacity: 0; /* Прозрачность по умолчанию */
 
     transition: opacity .4s, visibility .4s; /* Плавный переход */
+
 }
 
 .filter__show{
@@ -165,13 +167,16 @@ text-align: left;
 
 .filter__text{
   @include font-style(400, .875rem, 1.875rem, $description-dark);
-
+  
+  letter-spacing: -1px;
 }
 
 .fiter__text{
   @include font-style(400, .875rem, 1.875rem, $description-dark);
 
-  margin:0 0 1rem;
+  margin: 0 0 1.8rem;
+
+  letter-spacing: -1px;
 }
 
 
@@ -179,6 +184,8 @@ text-align: left;
   @include font-style(500, 1rem, 1.875rem, $description-dark);
 
   margin: 0 auto 0 0;
+
+  letter-spacing: -1px;
 }
 
 .close{
@@ -186,7 +193,7 @@ text-align: left;
    align-items: center;
    margin: 0 0 0.6rem;
 
-   cursor: pointer;
+  
 } 
 
  // SLYDER STYLE
@@ -210,7 +217,23 @@ text-align: left;
   border: none;
 
  }
- 
+
+ .slider-styled .noUi-origin {
+  width: 100%;
+}
+
+
+.noUi-connect, .noUi-origin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+}
+
  .slider-styled .noUi-handle:hover .noUi-touch-area {
    cursor: pointer;
  }
@@ -243,6 +266,7 @@ text-align: left;
  #invert-connects .noUi-tooltip {
   @include font-style(400, .75rem, 1.1rem, $description-dark);
 
+  left: 0;
    z-index: 10;
 
    padding: 5px;
@@ -304,19 +328,28 @@ text-align: left;
 .filter__apply-button{
     @include button-style(5.0625rem,2.75rem,$deep-blue,none,.5rem);
 
-    margin-top: 2.2rem;
-    margin-left: 10.2rem;
+    margin-top: 2.1rem;
+    margin-left: 10.4rem;
 
     @include font-style(500, .875rem, 1.5rem, $pure-white);
 
     font-family: $primary-font;
 }
 
+select {
+  padding-right: 20px; /* Добавляем отступ, чтобы стрелка не налезала на текст */
+
+  background: url('/public/images/music-img/arrow-selected.svg') no-repeat; /* Добавляем свою стрелку */
+  background-position: calc(100% - 25px) center; /* Подвигаем стрелку от правого края */
+
+  appearance: none; /* Отключаем стандартный стиль для остальных браузеров */
+}
+
 .filter__all-category-button{
-    width: 250px;
+    width: 247px;
     height: 44px;
-    margin: 40px 0 25px;
-    padding: 0 0 0 1rem;
+    margin: 42px 0 23px;
+    padding: 0 0 0 1.36rem;
     
     font-family: $primary-font;
     text-align: left;
@@ -326,9 +359,13 @@ text-align: left;
     border:1px solid $description-light;   
     border-radius: 8px;
 
-    @include font-style(500, .875rem, 1.5rem, $deep-blue);
+    @include font-style(500, none, 1.5rem, $deep-blue);
+    cursor: pointer;
 }
 
+.pointer{
+  cursor: pointer;
+}
 
 .filter__button{
   display: block;
@@ -359,6 +396,7 @@ text-align: left;
 
 .pre{
   max-width: 200px;
+
   white-space: break-spaces;
 }
 
@@ -382,10 +420,6 @@ text-align: left;
     border: none; 
 
 }
-
-.music-player__player-text-box{
- 
-  }
 
 .music-player__player-song{
   padding: 0.1rem 0.9rem 0.1rem 0.5rem;
@@ -438,9 +472,10 @@ text-align: left;
 
     .music-player__player-song{
       gap: 2.5rem;
+      align-items: flex-start;
+
       padding: 0.1rem 0.9rem 0.1rem 0.5rem;
       
-      align-items: flex-start;
   }
 
   .music-player__max-width{
@@ -468,7 +503,9 @@ text-align: left;
   
   .music-player__tab-text{
       @include font-style(500, 1rem, 1.1875rem, $description-dark);
-      //margin:0 0 1rem 0.5rem;;
+
+      // margin:0 0 1rem 0.5rem;;
+
   }
   
   .music-player__song-name-text{
@@ -476,9 +513,10 @@ text-align: left;
   }
 
   .music-player{
-    padding: 116px 100px 100px;
-    margin: auto;
     max-width: 1900px;
+    
+    margin: auto;
+    padding: 116px 100px 100px;
     }
 
     .filter{
