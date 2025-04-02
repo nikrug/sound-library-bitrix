@@ -60,6 +60,6 @@ export const footerBodyList = [
         link: '/'
       }
     ]
-  },
+  }
 
 ]

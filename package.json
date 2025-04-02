@@ -9,7 +9,7 @@
     "stylelint": "stylelint \"**/*.scss\" --fix",
     "webp": "npx ts-node image-minimizer.config.ts",
     "fonts": "npx ts-node font-generation.config.ts",
-    "fix":"estlint --ext .ts src --fix"
+    "fix":"eslint --ext .ts src --fix"
   },
   "author": "",
   "license": "ISC",

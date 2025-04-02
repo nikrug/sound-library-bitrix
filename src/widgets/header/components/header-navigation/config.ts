@@ -18,5 +18,5 @@ export const navList = [
   {
     link: '/',
     label: 'FAQ'
-  },
+  }
 ]
