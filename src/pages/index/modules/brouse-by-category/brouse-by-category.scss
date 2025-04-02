@@ -52,6 +52,10 @@
     @include font-style(600, .875rem, 1.5rem, $deep-blue )
 }
 
+.categoryes__see-all-text:hover{
+    @include font-style(none, none, none, $dark-blue )
+}
+
 @media(min-width:#{$br-tablet}px) {
     .categoryes{
         padding:5.5rem 3.75rem 2.5rem;

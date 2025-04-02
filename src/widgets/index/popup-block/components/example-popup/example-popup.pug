@@ -3,9 +3,12 @@
           .modal__content
                p.modal__login-title-text Login
                .modal__img-container
-                    img.modal__login-icons(src='/public/images/header/google.svg')
-                    img.modal__login-icons(src='/public/images/header/facebook.svg')
-                    img.modal__login-icons(src='/public/images/header/twitter.svg')
+                    a(href="https://www.google.ru/?hl=ru")
+                         img.modal__login-icons(src='/public/images/header/google.svg')
+                    a(href="https://www.facebook.com/?locale=ru_RU")
+                         img.modal__login-icons(src='/public/images/header/facebook.svg')
+                    a(href="https://twitter.com/")
+                         img.modal__login-icons(src='/public/images/header/twitter.svg')
                p.modal__use-email-text or use your email
                .modal__login-form
                               p.modal__email-password-text Email

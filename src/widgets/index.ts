@@ -1,5 +1,3 @@
 import './index/index'
 import './header/headerController'
 import '../pages/index/modules/music-player/music-player.ts'
-import '../pages/index/modules/testimonials/testimonials.ts'
-import '../pages/index/modules/music-player/nouislider.min.js'

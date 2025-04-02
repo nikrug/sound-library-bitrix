@@ -18,38 +18,14 @@ closeButtons.forEach(button => {
   })
 })
 
-// Получаем все элементы SVG с классом mySvg
-const svgElements = document.querySelectorAll<SVGSVGElement>('.mySvg')
+// Закрываем фильтр при клике за пределами фильтра
+document.addEventListener('click', (event) => {
+  const target = event.target as HTMLElement;
 
-// Определяем переменные для цветов
-const originalStrokeColor = '#4C526A'
-const newStrokeColor = '#0432DF'
-const originalFillColor = 'none' // Начальный цвет заливки
-const newFillColor = '#0432DF' // Новый цвет заливки
-
-// Добавляем обработчик события клика к каждому элементу
-svgElements.forEach(svgElement => {
-  svgElement.addEventListener('click', function () {
-    const path = svgElement.querySelector('path')
-    if (path) {
-      const currentStrokeColor = path.getAttribute('stroke')
-      const currentFillColor = path.getAttribute('fill')
-
-      // Меняем цвет обводки
-      if (currentStrokeColor === originalStrokeColor) {
-        path.setAttribute('stroke', newStrokeColor)
-      } else {
-        path.setAttribute('stroke', originalStrokeColor)
-      }
-
-      // Меняем цвет заливки
-      if (currentFillColor === originalFillColor) {
-        path.setAttribute('fill', newFillColor)
-      } else {
-        path.setAttribute('fill', originalFillColor)
-      }
-    }
-  })
+  // Проверяем, кликнули ли на фильтр или на одну из кнопок
+  if (filter && !filter.contains(target) && !Array.from(openButtons).includes(target as HTMLButtonElement)) {
+    filter.classList.remove('filter__show')
+  }
 })
 
 function formatTime (value: number): string {
@@ -82,23 +58,29 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-const playPauseButtons = document.querySelectorAll<HTMLImageElement>('.play-pause-button')
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll<HTMLElement>('.tab-btn')
+  const tabContents = document.querySelectorAll<HTMLElement>('.music-player__tab-content')
 
-playPauseButtons.forEach(button => {
-  // Теперь мы ищем родительский элемент .music-player__player-song
-  const audio = button.closest<HTMLElement>('.music-player__player-song')?.querySelector<HTMLAudioElement>('.audio')
+  tabButtons.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+          // Remove the active class from all tabs
+          tabButtons.forEach(btn => btn.classList.remove('tab-active'))
+          // Hide all content
+          tabContents.forEach(content => content.classList.remove('active'))
 
-  if (audio) { // Дополнительная проверка на существование элемента audio
-    button.onclick = function () {
-      if (audio.paused) {
-        audio.play()
-        button.src = '/public/images/music-img/pause-button.svg' // Иконка паузы
-      } else {
-        audio.pause()
-        button.src = '/public/images/music-img/play-button.svg' // Иконка воспроизведения
-      }
-    }
-  } else {
-    console.error('Audio element not found for button: ', button)
+          // Add active class to the clicked tab
+          tab.classList.add('tab-active')
+
+          // Ensure that the index is valid before accessing tabContents
+          if (index >= 0 && index < tabContents.length) {
+              tabContents[index].classList.add('active') // Show corresponding content
+          }
+      })
+  })
+
+  // Show the first tab and its content initially
+  if (tabButtons.length > 0) {
+      tabButtons[0].click()
   }
 })
