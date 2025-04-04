@@ -1,5 +1,3 @@
-import noUiSlider from 'nouislider'
-
 // Получаем элементы
 const filter = document.querySelector<HTMLElement>('.filter')
 const openButtons = document.querySelectorAll<HTMLButtonElement>('.filter__open')
@@ -28,35 +26,6 @@ document.addEventListener('click', (event) => {
   }
 })
 
-function formatTime (value: number): string {
-  const pad = (n: number): string => ('0' + n).slice(-2)
-  const mins = Math.floor(value)
-  return `${pad(Math.floor(mins / 60))}:${pad(mins % 60)}`
-}
-
-// Инициализируем слайдер
-window.addEventListener('DOMContentLoaded', () => {
-  const invertConnectsSlider = document.getElementById('invert-connects') as HTMLElement
-
-  if (invertConnectsSlider) {
-    noUiSlider.create(invertConnectsSlider, {
-      start: [60, 120],
-      step: 1,
-      connect: true,
-      range: {
-        min: 0,
-        max: 180
-      },
-      tooltips: {
-        to: formatTime,
-        from: (value) => {
-          const num = parseFloat(value)
-          return !isNaN(num) ? num : 0
-        }
-      }
-    })
-  }
-})
 
 document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll<HTMLElement>('.tab-btn')

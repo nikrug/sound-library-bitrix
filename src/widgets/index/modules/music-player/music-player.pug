@@ -1,9 +1,5 @@
 mixin music-player
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css")
-    block scripts
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js")
-    script.
-    
     .music-player
             .music-player__title-text Best sound effects for youtube videos
 
@@ -60,26 +56,9 @@ mixin music-player
                 .music-player__tab-content 
                     +music-player-song
 
-            div.music-player__filter.filter
-                    .filter__close.close 
-                        p.fiter__title-text Filter
-                        button 
-                            img.pointer(src="/public/images/music-img/close.svg")
-                        
-                    p.fiter__text Duration
-                    div.slider-styled#invert-connects
-                    select.filter__all-category-button.fiter__category-text
-                        option.zxzx All categores
-                        option.zxzxx z,z,z 
-                        option.zxzxxx z,z,z 
-                    label
-                        input.music-player__input(type="checkbox" name="subscribe")
-                        p.filter__text Only free sounds
-                    label
-                        input.music-player__input(type="checkbox" name="favorite")
-                        p.filter__text Only my favorite sounds
-                    button.filter__apply-button Apply
+            +filter
             a.music-link-text(href="#") See all sound effects
+
        
 
 

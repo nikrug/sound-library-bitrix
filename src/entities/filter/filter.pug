@@ -1,0 +1,28 @@
+mixin filter
+    div.music-player__filter.filter
+                    .filter__close.close 
+                        p.fiter__title-text Filter
+                        button 
+                            img.pointer(src="/public/images/music-img/close.svg")
+                        
+                    p.fiter__text Duration
+
+                    
+                        +slider-filter('slider-1')
+                        
+                        +slider-filter('slider-2')
+                        
+                        +slider-filter('slider-3')
+                        
+
+                    select.filter__all-category-button.fiter__category-text
+                        option.zxzx All categores
+                        option.zxzxx z,z,z 
+                        option.zxzxxx z,z,z 
+                    label
+                        input.music-player__input(type="checkbox" name="subscribe")
+                        p.filter__text Only free sounds
+                    label
+                        input.music-player__input(type="checkbox" name="favorite")
+                        p.filter__text Only my favorite sounds
+                    button.filter__apply-button Apply

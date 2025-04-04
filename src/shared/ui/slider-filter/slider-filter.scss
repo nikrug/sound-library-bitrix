@@ -1,0 +1,101 @@
+ // SLYDER STYLE
+ .noUi-connect, .noUi-origin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  
+    width: 10px;
+    height: 100px;
+  
+  }
+  
+   .slider-styled,
+   .slider-styled .noUi-handle {
+     box-shadow: none;
+   }
+   
+   .slider-styled .noUi-handle::before,
+   .slider-styled .noUi-handle::after {
+     display: none;
+   }
+   
+   .slider-styled .noUi-handle .noUi-touch-area {
+    position: absolute;
+    inset:-10px;
+  
+    width: auto;
+    height: auto;
+  
+    border: none;
+  
+   }
+   .noUi-target{
+    height: 4px;
+   }
+   .noUi-horizontal .noUi-origin {
+    height: 4px;
+    width: 100%;
+    }
+  
+  
+   .slider-styled .noUi-handle:hover .noUi-touch-area {
+     cursor: pointer;
+   }
+   
+   .slider {
+     height: 4px;
+     margin-top: 25px;
+     overflow: visible; /* Allow tooltips to be visible */
+  
+     border: none;
+   }
+   .noUi-target{
+    height: 4px !important;
+   }
+   
+    .slider .noUi-connect {
+     background: $deep-blue;
+   }
+   .slider .noUi-target {
+    background: #FAFAFA;
+    border-radius: 4px;
+    height: 4px;
+    border: 1px solid #D3D3D3;
+    box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+    }
+
+   .noUi-base, .noUi-connects {
+    width: 100%;
+    height: 4px;
+    position: relative;
+    z-index: 1;
+}
+   
+   .slider .noUi-handle {
+     top: -2px;  /* Adjusted for better visibility */
+     right: -7px;
+  
+     width: 8px;
+     height: 8px;
+  
+     background: $deep-blue;
+  
+     border: none;
+     border-radius: 9px;
+   }
+   
+   .slider .noUi-tooltip {
+    @include font-style(400, .75rem, 1.1rem, $description-dark);
+  
+    left: 0;
+     z-index: 10;
+  
+     padding: 5px;
+  
+     white-space: nowrap; /* Prevent wrapping */
+  
+     background-color:$title-light;
+  
+     border: 0;
+   }

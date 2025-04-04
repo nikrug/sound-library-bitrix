@@ -1,0 +1,236 @@
+ // FILTER
+ .filter{
+    position: absolute; /* Размещение относительно родительского элемента */
+    top: 80px;
+    right:0; /* Расположение справа */
+    z-index: 1; /* Обеспечивает видимость над другими элементами */
+   
+    
+    display: inline-block; /* Чтобы элемент мог занимать пространство */
+    width: 288px;
+    height: 377px;
+    margin-right: .9375rem;
+    padding: 0.3rem 1.3rem;
+    overflow: auto; /* Позволяет прокручивать содержимое, если оно выходит за пределы */
+    
+    background-color:$title-light;
+
+    border-radius: 4px;
+
+    visibility: hidden; /* Скрывает элемент по умолчанию */
+    opacity: 0; /* Прозрачность по умолчанию */
+
+    transition: opacity .4s, visibility .4s; /* Плавный переход */
+
+}
+
+.filter__show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.filter__text{
+  @include font-style(400, .875rem, 1.875rem, $description-dark);
+  
+  letter-spacing: -1px;
+}
+
+.fiter__text{
+  @include font-style(400, .875rem, 1.875rem, $description-dark);
+
+  margin: 0 0 1.8rem;
+
+  letter-spacing: -1px;
+}
+
+
+.fiter__title-text{
+  @include font-style(500, 1rem, 1.875rem, $description-dark);
+
+  margin: 0 auto 0 0;
+
+  letter-spacing: -1px;
+}
+
+.close{
+   display: flex;
+   align-items: center;
+   margin: 0 0 0.6rem;
+
+  
+} 
+
+  // FILTER TEXT
+
+.music-player__fiter-title-text{
+    @include font-style(500, 1rem, 1.375rem, $description-dark);
+
+    margin: -30px 0 20px;
+
+}
+
+.music-player__fiter-text{
+    @include font-style(400, .875rem, 1.5rem, $description-dark)
+}
+
+.music-player__fiter-category-text{
+    @include font-style(500, .875rem, 1.5rem, $deep-blue)
+}
+
+ // КНОПКИ ДЛЯ ФИЛЬТРА
+.filter__apply-button{
+    @include button-style(5.0625rem,2.75rem,$deep-blue,none,.5rem);
+
+    margin-top: 2.1rem;
+    margin-left: 10.4rem;
+
+    @include font-style(500, .875rem, 1.5rem, $pure-white);
+
+    font-family: $primary-font;
+}
+
+select {
+  padding-right: 20px; /* Добавляем отступ, чтобы стрелка не налезала на текст */
+
+  background: url('/public/images/music-img/arrow-selected.svg') no-repeat; /* Добавляем свою стрелку */
+  background-position: calc(100% - 25px) center; /* Подвигаем стрелку от правого края */
+
+  appearance: none; /* Отключаем стандартный стиль для остальных браузеров */
+}
+
+.filter__all-category-button{
+    width: 247px;
+    height: 44px;
+    margin: 42px 0 23px;
+    padding: 0 0 0 1.36rem;
+    
+    font-family: $primary-font;
+    text-align: left;
+
+    background-color: $title-light;
+
+    border:1px solid $description-light;   
+    border-radius: 8px;
+
+    @include font-style(500, none, 1.5rem, $deep-blue);
+    cursor: pointer;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.filter__button{
+  display: block;
+  margin-left: auto;
+
+  cursor: pointer;
+
+}
+
+.filter__button-tablet{
+  display: none;
+  margin-left: auto;
+
+  cursor: pointer;
+
+}
+
+.filter__button-desktop{
+  display: none;
+  margin-left: auto;
+
+  cursor: pointer;
+}
+
+.filter__button{
+        
+    display: none;
+}
+
+.filter__button-tablet{
+    
+    display: block;
+}
+
+.show{
+display: flex;
+
+visibility: visible;
+
+cursor: pointer;
+}
+
+.filter{
+top: 5rem; /* Расположение сверху */
+}
+
+.music-player__input[type="checkbox"]::before{
+    display: inline-block;
+
+    width: 1.125rem;
+    height: 1.125rem; 
+    margin: 0 .7rem 0 0.1rem;
+
+    background-color:$pure-white;
+
+    border-radius: .1875rem; 
+
+    cursor: pointer;
+
+    content: "";
+  }
+
+  .music-player__input[type="checkbox"]:checked::before {
+    background-color: $pure-white; 
+    background-image: url("/public/images/music-img/Vector.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%; 
+
+    cursor: pointer;
+   }
+
+   .slider-3 {
+    background: linear-gradient(to right, #f06, #4a90e2); /* Пример градиента */
+  }
+  
+  /* Стили для слайдера с классом slider-custom */
+  .slider-2 {
+    .noUi-handle {
+        top: -2px;  /* Adjusted for better visibility */
+        right: -7px;
+     
+        width: 8px;
+        height: 8px;
+     
+        background: red;
+     
+        border: none;
+        border-radius: 9px;
+      }
+  }
+  
+  /* Стили для слайдера с классом slider-another-style */
+  .slider-1 {
+    border: 2px solid #ff4081; /* Розовая рамка слайдера */
+  }
+
+
+@media(min-width:#{$br-desktop}px){
+
+    .filter__button-tablet{
+        display: none;
+    }
+
+    .filter__button-desktop{
+        display: block;
+    }
+
+
+    .filter{
+      top: 126px;
+      
+      margin-right: 6.25rem;
+  }
+  }

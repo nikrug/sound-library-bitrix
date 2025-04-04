@@ -1,8 +1,7 @@
 mixin music-player-song 
     div.music-player__player-song
         audio.audio(src="/public/music/daisuke.mp3")
-        button
-            img.play-pause-button(src="/public/images/music-img/play-button.svg" alt="Play/Pause")
+        +play-pause-button
 
         div.music-player__player-text-box.no-wrap
             div.music-player__song-name-text Sound name

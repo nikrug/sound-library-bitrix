@@ -1,0 +1,58 @@
+.categoryes{
+    max-width: 1900px;
+    margin: auto;
+    padding: 1.5rem 1rem 2.5rem;
+}
+
+.categoryes__img-box {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(8.7rem, 1fr)); // Измените minmax на 1fr для более гибкого использования пространства
+    gap: .6rem;
+    margin: 0.625rem 0 0.9rem;
+}
+
+
+.categoryes__title-text{
+    @include font-style(600, 1.25rem, 1.875rem, $dark-blue );
+
+    margin-bottom: 1.5rem;
+}
+
+.categoryes__see-all-text{
+    @include font-style(600, .875rem, 1.5rem, $deep-blue )
+}
+
+.categoryes__see-all-text:hover{
+    @include font-style(none, none, none, $dark-blue )
+}
+
+@media(min-width:#{$br-tablet}px) {
+    .categoryes{
+        padding:5.5rem 3.75rem 2.5rem;
+    }
+
+    .categoryes__title-text{
+        @include font-style(600, 1.5rem, 2.375rem, $dark-blue )
+        
+    }
+
+    .categoryes__img-box {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+        grid-template-columns: repeat(4, 1fr); // Сетка 2 колонки
+    }
+
+}
+
+@media(min-width:#{$br-desktop}px) {
+    .categoryes{
+        padding: 0 6.3125rem;
+    }
+
+    .categoryes__img-box {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+        grid-template-columns: repeat(6, 1fr); // Сетка 2 колонки
+        margin: 0.625rem 0 1.3rem;
+     
+    }
+}
