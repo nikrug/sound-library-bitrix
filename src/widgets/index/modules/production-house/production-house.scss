@@ -11,7 +11,7 @@
 .production__image-container{
     display: flex;
     flex-flow: row wrap;
-    gap:.3125rem;
+    gap:30px;
     justify-content: center;
     margin-top: 1.875rem;
 
@@ -22,19 +22,33 @@
     
 }
 
+.production__img-scale-sqare{
+    width: 40px;
+}
+
+.production__img-scale-sith{
+    width: 80px;
+}
+
+.production__img-scale-mrbeast{
+    width: 67px;
+}
+
 @media(min-width:#{$br-tablet}px) {
     .production__title-text{
         @include font-style(600, 1.25rem, 1.875rem, $dark-blue)
     }
 
     .production__image-container{
-        gap:10px;
+        gap:40px;
     }
 
     .production{
         padding: 2.5rem 6.25rem;
 
     }
+
+
     
   }  
 
@@ -46,5 +60,17 @@
 
     .production{
         padding: 3rem 6.25rem 2.5rem;
+    }
+
+    .production__img-scale-sqare{
+        width: auto;
+    }
+
+    .production__img-scale-sith{
+        width: auto;
+    }
+
+    .production__img-scale-mrbeast{
+        width: auto;
     }
   }

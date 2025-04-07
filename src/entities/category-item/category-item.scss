@@ -31,7 +31,6 @@
 
 
 @media(min-width:#{$br-tablet}px) {
-
     .categoryes__img-text{
         @include font-style(600, 1.125rem, 1.875rem, $title-light );
     }
@@ -45,7 +44,6 @@
 }
 
 @media(min-width:#{$br-desktop}px) {
-
     .categoryes__img {
         width: 98%;
         height: 95%;

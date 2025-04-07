@@ -143,15 +143,6 @@ select {
   cursor: pointer;
 }
 
-.filter__button{
-        
-    display: none;
-}
-
-.filter__button-tablet{
-    
-    display: block;
-}
 
 .show{
 display: flex;
@@ -161,9 +152,7 @@ visibility: visible;
 cursor: pointer;
 }
 
-.filter{
-top: 5rem; /* Расположение сверху */
-}
+
 
 .music-player__input[type="checkbox"]::before{
     display: inline-block;
@@ -190,35 +179,32 @@ top: 5rem; /* Расположение сверху */
 
     cursor: pointer;
    }
+  
 
-   .slider-3 {
-    background: linear-gradient(to right, #f06, #4a90e2); /* Пример градиента */
+  @media(min-width:#{$br-tablet}px){
+    .filter__button{
+        
+      display: none;
   }
-  
-  /* Стили для слайдера с классом slider-custom */
-  .slider-2 {
-    .noUi-handle {
-        top: -2px;  /* Adjusted for better visibility */
-        right: -7px;
-     
-        width: 8px;
-        height: 8px;
-     
-        background: red;
-     
-        border: none;
-        border-radius: 9px;
-      }
+
+    .filter__button-tablet{
+        display: block;
+    }
+
+    .filter__button-desktop{
+        display: none;
+    }
+
+
+    .filter{
+      top: 75px;
+
+      margin-right: 3.25rem;
   }
-  
-  /* Стили для слайдера с классом slider-another-style */
-  .slider-1 {
-    border: 2px solid #ff4081; /* Розовая рамка слайдера */
   }
 
 
 @media(min-width:#{$br-desktop}px){
-
     .filter__button-tablet{
         display: none;
     }

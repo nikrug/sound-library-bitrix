@@ -30,12 +30,14 @@
     border: none;
   
    }
+
    .noUi-target{
     height: 4px;
    }
+
    .noUi-horizontal .noUi-origin {
-    height: 4px;
     width: 100%;
+    height: 4px;
     }
   
   
@@ -50,41 +52,56 @@
   
      border: none;
    }
-   .noUi-target{
-    height: 4px !important;
+
+   .sliderr .noUi-target{
+    width: 240px;
+    height: 4px ;
    }
    
     .slider .noUi-connect {
      background: $deep-blue;
    }
+
    .slider .noUi-target {
-    background: #FAFAFA;
-    border-radius: 4px;
     height: 4px;
-    border: 1px solid #D3D3D3;
-    box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+
+    background: $pure-white;
+    border: 1px solid $title-light;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px $pure-white, 0 3px 6px -5px $title-light;
     }
 
    .noUi-base, .noUi-connects {
-    width: 100%;
-    height: 4px;
     position: relative;
     z-index: 1;
+
+    width: 100%;
+    height: 4px;
 }
    
-   .slider .noUi-handle {
-     top: -2px;  /* Adjusted for better visibility */
-     right: -7px;
+   .sliderr .noUi-horizontal .noUi-handle  {
+     top: -3px ;  /* Adjusted for better visibility */
+     right: -7px ;
   
-     width: 8px;
-     height: 8px;
+     width: 8px ;
+     height: 8px ;
   
      background: $deep-blue;
   
      border: none;
      border-radius: 9px;
+
+     box-shadow: none;
    }
-   
+
+   .slider-styled .noUi-horizontal .noUi-handle {
+    /* right: -17px; */
+    top: -3px;
+
+    width: 8px;
+    height: 8px;
+  }
+
    .slider .noUi-tooltip {
     @include font-style(400, .75rem, 1.1rem, $description-dark);
   

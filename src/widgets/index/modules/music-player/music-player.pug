@@ -12,14 +12,18 @@ mixin music-player
                         .tab-btn Happines
                         .tab-btn Ambience
                         .tab-btn Zonk
-                    button
-                        img.filter__button.filter__open(src="/public/images/music-img/filter_mobile.svg")
-                    button
-                        img.filter__button-tablet.filter__open(src="/public/images/music-img/filter_tablet.svg")
-                    button
-                        img.filter__button-desktop.filter__open(src="/public/images/music-img/filter_desctop.svg")
+                    
+                    img.filter__button.filter__open(src="/public/images/music-img/filter_mobile.svg")
+                    
+                    img.filter__button-tablet.filter__open(src="/public/images/music-img/filter_tablet.svg")
+                    
+                    img.filter__button-desktop.filter__open(src="/public/images/music-img/filter_desctop.svg")
 
                 .music-player__tab-content.active
+                    +music-player-song
+                    +music-player-song
+                    +music-player-song
+                    +music-player-song
                     +music-player-song
                     +music-player-song
                 .music-player__tab-content

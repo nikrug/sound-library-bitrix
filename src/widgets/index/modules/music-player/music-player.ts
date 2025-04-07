@@ -26,7 +26,6 @@ document.addEventListener('click', (event) => {
   }
 })
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll<HTMLElement>('.tab-btn')
   const tabContents = document.querySelectorAll<HTMLElement>('.music-player__tab-content')

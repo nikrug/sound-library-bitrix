@@ -9,7 +9,7 @@
     "stylelint": "stylelint \"**/*.scss\" --fix",
     "webp": "npx ts-node image-minimizer.config.ts",
     "fonts": "npx ts-node font-generation.config.ts",
-    "fix":"eslint --ext .ts src --fix"
+    "fix": "eslint --ext .ts src --fix"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.13.1",
     "babel-loader": "^9.1.3",
+    "browser-sync": "^3.0.4",
     "copy-webpack-plugin": "^12.0.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.10.0",

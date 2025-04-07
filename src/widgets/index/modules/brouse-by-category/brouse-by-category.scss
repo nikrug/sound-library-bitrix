@@ -9,7 +9,14 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(8.7rem, 1fr)); // Измените minmax на 1fr для более гибкого использования пространства
     gap: .6rem;
-    margin: 0.625rem 0 0.9rem;
+    margin: 1.3rem 0 0.9rem;
+
+    
+    
+}
+
+.categoryes__img{
+    object-fit: cover;
 }
 
 
@@ -26,6 +33,8 @@
 .categoryes__see-all-text:hover{
     @include font-style(none, none, none, $dark-blue )
 }
+
+
 
 @media(min-width:#{$br-tablet}px) {
     .categoryes{
@@ -52,6 +61,7 @@
     .categoryes__img-box {
         grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
         grid-template-columns: repeat(6, 1fr); // Сетка 2 колонки
+        gap:12px;
         margin: 0.625rem 0 1.3rem;
      
     }

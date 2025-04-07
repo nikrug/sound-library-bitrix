@@ -21,7 +21,7 @@
         left: 0;
     
         width: 100%;
-        margin: 2rem 0 0;
+        margin: 1.5rem 0 0;
     
     }
     
@@ -58,8 +58,6 @@
        }
     
     @media(min-width:#{$br-tablet}px) {
-
-    
         .experiens__title-text{
             @include font-style(600, 1.5rem, 2.375rem, $dark-blue );
        }
