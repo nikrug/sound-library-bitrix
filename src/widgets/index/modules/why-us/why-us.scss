@@ -47,7 +47,7 @@ text-align: center;
 
 @media(min-width:#{$br-tablet}px) {
     .why-us{
-        padding: 2.525rem 1rem 1.825rem;
+        padding: 3.3rem 1rem 1.825rem;
     }
 
     .why-us__text-box{
@@ -70,7 +70,9 @@ text-align: center;
     }
 
     .why-us__title-text{
-        @include font-style(600, 1.5rem, 2.375rem, $dark-blue )
+        @include font-style(600, 1.5rem, 2.375rem, $dark-blue );
+
+        letter-spacing: -.5px;
         
     }
 
@@ -89,7 +91,7 @@ text-align: center;
         justify-content: start;
         max-width: 1900px;
         margin: auto;
-        padding: 7rem 6.25rem 4.7rem;
+        padding: 5.7rem 6.25rem 4.5rem
 
     }
 

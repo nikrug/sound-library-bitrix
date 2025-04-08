@@ -28,6 +28,8 @@ text-align: center;
      @include font-style(600, 1.25rem, 1.875rem, $dark-blue );
 
      margin: 1.5rem 0;
+
+     letter-spacing: .1px;
 }
 
 .experiens__yellow-title-text{
@@ -37,7 +39,7 @@ text-align: center;
 
 @media(min-width:#{$br-tablet}px) {
     .experiens{
-        padding: 3.125rem 1.25rem 4.2rem;
+        padding: 3.8rem 1.25rem 4.2rem;
     }
 
     .show-experiens-tablet{
@@ -58,6 +60,8 @@ text-align: center;
 
     .experiens__title-text{
         @include font-style(600, 1.5rem, 2.375rem, $dark-blue );
+
+        letter-spacing: -.5px;
    }
 }
 
@@ -67,7 +71,7 @@ text-align: center;
     }
 
     .experiens {
-        padding: 3.4rem 1.25rem 7.5rem
+        padding: 3.7rem 1.25rem 6.7rem;
     }
 
     .experiens__customer{

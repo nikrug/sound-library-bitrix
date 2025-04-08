@@ -61,6 +61,7 @@ text-align: center
  // text
 .download__title-text{
     @include font-style(600, 1.5rem,2.375rem,$pure-white);
+    letter-spacing: -1px;
 }
 
 .download__description-text{
@@ -71,6 +72,7 @@ text-align: center
 
 .download__card-title-text{
     @include font-style(600, 1.25rem,1.875rem,$pure-white);
+   
 }
 
 .download__card-subtitle-text{
@@ -91,7 +93,7 @@ text-align: center
 
 @media(min-width:#{$br-tablet}px) {
     .download__title-text{
-        @include font-style(600, 1.5rem,2.375rem,$pure-white);
+        @include font-style(600, 1.8rem,2.375rem,$pure-white);
 
         margin: 0 0 1rem;
     }
@@ -110,7 +112,7 @@ text-align: center
     .download{
         justify-items: center;
 
-        padding: 4.3rem 5rem 0
+        padding: 4rem 5rem 0;
     }
 
     .download__card-box{

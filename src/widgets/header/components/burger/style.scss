@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 20px;
+  height: 16px;
 
   cursor: pointer;
 
@@ -18,7 +18,7 @@
 
   &._active &__line {
     &:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
+      transform: translateY(4px) rotate(45deg);
     }
 
     &:nth-child(2) {

@@ -36,15 +36,22 @@
 
 @media(min-width:#{$br-tablet}px) {
     .production__title-text{
-        @include font-style(600, 1.25rem, 1.875rem, $dark-blue)
+        @include font-style(600, 1.25rem, 1.875rem, $dark-blue);
+
+        letter-spacing: -.4px;
     }
 
     .production__image-container{
-        gap:40px;
+        gap:39px;
+        margin-top: 2.3rem;
+    }
+
+    .production__img-scale-sith{
+        width: 85px;
     }
 
     .production{
-        padding: 2.5rem 6.25rem;
+        padding: 2.5rem 3.25rem;
 
     }
 
@@ -55,6 +62,7 @@
   @media(min-width:#{$br-desktop}px){
     .production__image-container{
         gap:5.5rem;
+
     
     }
 

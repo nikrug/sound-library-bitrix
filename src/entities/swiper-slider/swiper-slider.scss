@@ -61,6 +61,12 @@
         .experiens__title-text{
             @include font-style(600, 1.5rem, 2.375rem, $dark-blue );
        }
+
+       .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+
+        margin:  0 0 0.8rem;
+    
+    }
     }
     
     @media(min-width:#{$br-desktop}px){

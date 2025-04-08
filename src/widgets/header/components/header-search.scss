@@ -69,6 +69,7 @@ input[type="checkbox"] {
     @include font-style(600, 1rem, 1.375rem, $description-light);
     
     margin: 0 0 2rem;
+
 }
 
 .header__search-text{
@@ -384,6 +385,8 @@ height: 1.5rem;
     
     .header__title-text-gray{
         @include font-style(500, 1.125rem, 1.875rem, $description-light);
+
+        letter-spacing: -1.3px;
     }
     
 
@@ -435,6 +438,18 @@ height: 1.5rem;
         width: 600px;
 
         text-align: left;
+    }
+
+    .header__search-text{
+        margin: .5rem 0 2rem;
+
+        letter-spacing: -1px;
+    }
+
+    .header__bottom-text{
+        margin: 0 0 3.4rem;
+
+        letter-spacing: -.2px;
     }
   } 
 

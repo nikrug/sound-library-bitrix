@@ -60,9 +60,8 @@ text-align: left;
 
 .music-player__player-song{
     display: flex;
-    gap:.575rem;
     align-items: flex-start;
-    padding: 0.625rem 0.9rem 0.6rem 0.5rem;
+    padding: 1rem 0.9rem 0.09rem 0.5rem;
 
     border-bottom: 1px solid $blue-saturat;
 
@@ -101,11 +100,15 @@ text-align: left;
 .music-player__tab-text{
     @include font-style(500, .875rem, 1.1875rem, $description-dark);
 
+    letter-spacing: -1px;
+
    // margin: 1rem 0 1rem 0.5rem;
 }
 
 .music-player__song-name-text{
-    @include font-style(500, .875rem, 1.1875rem, $dark-blue)
+    @include font-style(500, .8rem, 1.1875rem, $dark-blue);
+
+    letter-spacing:-1px;
 }
 
 .music-player__time-text{
@@ -113,7 +116,9 @@ text-align: left;
 }
 
 .music-link-text{
-  @include font-style(600, .85rem, 1.5rem,  $deep-blue)
+  @include font-style(600, .85rem, 1.5rem,  $deep-blue);
+
+  letter-spacing: -.7px;
 }
 
 .music-link-text:hover{
@@ -124,8 +129,8 @@ text-align: left;
 
 .music-player__tab-header {
   display: flex;
-  gap: 0.9rem;
-  max-width: 180px;
+  gap: .8rem;
+  max-width: 160px;
   height: 25px;
   margin-top: .5rem;
   margin-right: auto;
@@ -191,7 +196,8 @@ path {
 }
 
 .music-player__player-song{
-  padding: 0.1rem 0.9rem 0.1rem 0.5rem;
+  gap: 5.53rem;
+  padding: 0.45rem 1.5rem;
 }
 
 .tab{
@@ -208,21 +214,32 @@ path {
 
 
 .music-player{
-  padding: 3.125rem 3.6rem .125rem 4.5rem;
+  padding: 3.325rem 3.6rem 0.125rem 3.8rem;
+  }
+
+  .music-player__title-text{
+    @include font-style(600, 1.5rem, 1.875rem, $dark-blue);
+
+    letter-spacing:-.5px;
   }
 
   .music-player__player-img-box{
-    display: -webkit-box;;
+    gap: 20px;
   }
 
   .music-player__tab-header {
     display: flex;
-    max-width:410px;
+    gap: 1.8rem;
+    max-width: 450px;
     overflow-x: auto; /* Allow horizontal scrolling */
 
     white-space: nowrap; /* Prevent line breaks */
 
     border-bottom: 1px solid $title-light; /* Styling for the border */
+  }
+
+  .music-player__tab-container{
+    margin: 1.4rem 0 0 0.6rem;
   }
 }
 
@@ -250,7 +267,7 @@ path {
       gap: 2.5rem;
       align-items: flex-start;
 
-      padding: 0.1rem 0.9rem 0.1rem 0.5rem;
+      padding: 0.9rem 0.9rem 0.9rem 0.5rem;
       
   }
 
@@ -284,7 +301,7 @@ path {
     max-width: 1900px;
     
     margin: auto;
-    padding: 116px 100px 100px;
+    padding: 110px 100px 120px;
     }
 
 

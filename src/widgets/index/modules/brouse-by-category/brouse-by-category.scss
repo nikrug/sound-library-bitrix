@@ -38,17 +38,20 @@
 
 @media(min-width:#{$br-tablet}px) {
     .categoryes{
-        padding:5.5rem 3.75rem 2.5rem;
+        padding: 5.5rem 3.75rem 0;
     }
 
     .categoryes__title-text{
-        @include font-style(600, 1.5rem, 2.375rem, $dark-blue )
+        @include font-style(600, 1.5rem, 2.375rem, $dark-blue );
+
+        letter-spacing: -.4px;
         
     }
 
     .categoryes__img-box {
         grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
         grid-template-columns: repeat(4, 1fr); // Сетка 2 колонки
+        margin: 1.3rem 0 0.5rem
     }
 
 }
@@ -62,7 +65,18 @@
         grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
         grid-template-columns: repeat(6, 1fr); // Сетка 2 колонки
         gap:12px;
-        margin: 0.625rem 0 1.3rem;
+        margin: 1.625rem 0 .8rem;
      
+    }
+
+    .categoryes__title-text{
+        @include font-style(600, 1.8rem, 2.375rem, $dark-blue );
+
+        letter-spacing: -1px;
+        
+    }
+
+    .categoryes__see-all-text{
+        @include font-style(600, .975rem, 1.5rem, $deep-blue )
     }
 }

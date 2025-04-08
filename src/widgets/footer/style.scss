@@ -33,7 +33,7 @@
     
     &__body {
 
-      gap: 130px;
+      gap: 25%;
 
     }
   }
@@ -49,6 +49,8 @@
       display: grid;
       grid-template-columns: 40% 60%; /* Создает 3 равные колонки */
       gap: 12px;   
+      max-width: 1900px;
+      margin: auto;
     }
   
     &__copy {
@@ -57,7 +59,7 @@
   
     &__body {
       display: flex;
-      gap: 4rem;
+      gap: 10rem;
       margin-left: auto;
     }
 
