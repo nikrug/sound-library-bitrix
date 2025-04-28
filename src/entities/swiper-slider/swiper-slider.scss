@@ -14,36 +14,6 @@
         @include font-style(500, .875rem, 1.5rem, $description-light);
     }
     
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-        position: relative;
-        top: var(--swiper-pagination-top, auto);
-        bottom: var(--swiper-pagination-bottom, 8px);
-        left: 0;
-    
-        width: 100%;
-        margin: 1.5rem 0 0;
-    
-    }
-    
-    .swiper{
-        max-width: 1900px;
-        margin: auto;
-    }
-    
-    .swiper-backface-hidden .swiper-slide {
-        display: flex;
-    
-        transform: translateZ(0);
-        
-        backface-visibility: hidden;
-    }
-    
-    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
-    
-        background-color: $description-dark;
-    
-    }
 
     .experiens__customer{
         justify-content: center;
@@ -62,11 +32,7 @@
             @include font-style(600, 1.5rem, 2.375rem, $dark-blue );
        }
 
-       .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
 
-        margin:  0 0 0.8rem;
-    
-    }
     }
     
     @media(min-width:#{$br-desktop}px){

@@ -6,7 +6,33 @@ mixin testimonials
         .experiens__title-block
             div.experiens__yellow-title-text TESTIMONIALS
             h1.experiens__title-text Hear good experiences from our customers
-        +swiper-slider 
+        .swiper
+            .swiper-wrapper
+                .swiper-slide
+                    +swiper-slider 
+                .swiper-slide
+                    +swiper-slider('/public/images/experiens/customer_2.svg', 'Anne Joyce', 'Video editor at Dude Perfect', 'The sounds from WavesCo is great and it really helps our team to save time and production costs.')
+                .swiper-slide
+                    +swiper-slider('/public/images/experiens/customer_3.svg', 'Ronn D.', 'Video Editor at PewDiePie', 'Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.')
+                .swiper-slide
+                    +swiper-slider 
+                .swiper-slide   
+                    +swiper-slider('/public/images/experiens/customer_2.svg', 'Anne Joyce', 'Video editor at Dude Perfect', 'The sounds from WavesCo is great and it really helps our team to save time and production costs.')
+                .swiper-slide
+                    +swiper-slider('/public/images/experiens/customer_3.svg', 'Ronn D.', 'Video Editor at PewDiePie', 'Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.')
+                .swiper-slide
+                    +swiper-slider 
+                .swiper-slide  
+                    +swiper-slider('/public/images/experiens/customer_2.svg', 'Anne Joyce', 'Video editor at Dude Perfect', 'The sounds from WavesCo is great and it really helps our team to save time and production costs.')
+                .swiper-slide  
+                    +swiper-slider('/public/images/experiens/customer_3.svg', 'Ronn D.', 'Video Editor at PewDiePie', 'Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.')
+                .swiper-scrollbar
+            // Элемент для пагинации
+
+
+            // Если нужны кнопки навигации   
+            .swiper-pagination
+
 
 
 
